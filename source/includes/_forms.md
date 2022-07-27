@@ -263,7 +263,9 @@ The endpoint update a specific form. Using this endpoint you will get to update 
 
 Parameter | type | Required | Description
 --------- | ---- | -------- | -----------
-id | string | true | The specific form id
+id | int | true | The newly created form id.
+builder_settings | json_string | true | All the fields and settings in a json string format
+submit_button_settings | json_string | true | Submit button settings in a json string format
 
 
 ## Delete a form
@@ -413,6 +415,41 @@ This endpoint return list of available forms. No url paramaters required.
 
 `GET https://yourdomain.com/wp-json/wppayform/v2/forms/formatted`
 
+## Export a form
+
+
+```php
+
+```
+
+```python
+
+```
+
+```shell
+curl "https://yourdomain.com/wp-json/wppayform/v2/tools/form/{id}/export/" \
+  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Request type: GET"
+```
+
+```javascript
+
+```
+
+> The above command returns a downloadable json file:
+
+
+This endpoint make a form get downloaded as a json file.
+
+### HTTP Request
+
+`GET https://yourdomain.com/wp-json/wppayform/v2/tools/form/{id}/export/`
+
+### URL Parameters for first end point
+
+Parameter | type | Required | Description
+--------- | ---- | -------- | -----------
+id | string | true | The specific `form id`
 
 
 
