@@ -93,7 +93,6 @@ Parameter | Type | Description | Required | Default
 per_page | int | Forms per page. | false | 20
 page | int | Page number of pagination | false | 1
 search | string | Search by forms title | false |
-order_by | string | Forms sort by(use sorting key) | false |
 order_type | string | ASC/DESC | false | ASC
 
 
@@ -454,3 +453,173 @@ id | string | true | The specific `form id`
 
 
 
+# Coupons
+
+## Get coupons
+
+```php
+
+```
+
+```python
+
+```
+
+```shell
+curl "https://yourdomain.com/wp-json/wppayform/v2/settings/coupon" \
+  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Request type: GET"
+```
+
+```javascript
+
+```
+
+> The above command return json structured like this.
+
+
+```json
+{
+    "coupon_status": "yes",
+    "coupons": [
+        {
+            "id": 1,
+            "title": "Eid",
+            "code": "123",
+            "coupon_type": "percent",
+            "amount": "5.00",
+            "status": "active",
+            "stackable": "no",
+            "settings": {
+                "allowed_form_ids": []
+            },
+            "created_by": "1",
+            "min_amount": "455",
+            "max_use": "0",
+            "start_date": "2022-07-03",
+            "expire_date": "2022-07-30",
+            "created_at": "2022-07-29 04:04:52",
+            "updated_at": "2022-07-29 04:04:52"
+        }
+    ],
+    "total": 1,
+    "available_forms": {
+        "38": "Donate For Education Forms (#38)",
+        "37": "Blank Form (#37)",
+        "36": "Walk-a-Thon Registration Form (#36)",
+        "35": "Thanksgiving Donation Form (#35)",
+        "34": "Contact Form (#34)",
+        "33": "Blank Form (#33)",
+        "32": "Event Registration Form (#32)",
+        "30": "Blank Form (#30)",
+        "29": "Credit Card Donation Form (#29)",
+        "8": "Contact Form (#8)",
+        "7": "Blank Form (#7)"
+    }
+}
+```
+
+This endpoint retrieves all available coupons.
+
+### HTTP Request
+
+`GET https://yourdomain.com/wp-json/wppayform/v2/settings/coupon`
+
+### URL Parameters for first end point
+
+Parameter | type | Required | Description
+--------- | ---- | -------- | -----------
+pagination | object | true | The pagination object consists of `per_page, current_page` fields.
+per_page | int | true | Ex: `per page - 15,20`
+current_page | int | true | Ex: `current page  - 1`
+
+## Save coupons
+
+
+```php
+
+```
+
+```python
+
+```
+
+```shell
+curl "https://yourdomain.com/wp-json/wppayform/v2/settings/coupon" \
+  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Request type: POST"
+```
+
+```javascript
+
+```
+
+> The above command returns json structured like this.
+
+
+```json
+{
+    "message": "Coupon has been created successfully"
+}
+```
+
+This endpoint will create a coupon upon providing the required values.
+
+### HTTP Request
+
+`POST https://yourdomain.com/wp-json/wppayform/v2/settings/coupon`
+
+### URL Parameters for first end point
+
+Parameter | type | Required | Description
+--------- | ---- | -------- | -----------
+coupon | object | true | In coupon object consists `title, code, amount, coupon_type, status, start_date, expire_date, settings ` fields.
+title | string | true | Title of the coupon.
+code | string | true | Unique coupon code.
+coupon_type | string | true | Coupon type `percent, fixed`.
+amount | int | true | Coupon percentage.
+status | string | true | The coupon status `active, inactive`
+settings | object | true | Allowed form ids will be included in settings, default: [].
+start_date| date | false | Coupon starting date.
+expire_date | date | false | Couon expire Date.
+
+## Delete a coupon
+
+```php
+
+```
+
+```python
+
+```
+
+```shell
+curl "https://yourdomain.com/wp-json/wppayform/v2/settings/coupon" \
+  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Request type: DELETE"
+```
+
+```javascript
+
+```
+
+> The above command returns json structured like this:
+
+
+```json
+{
+    "message": "Coupon has been successfully deleted"
+}
+```
+
+This endpoint delete a coupon upon providing the coupon id.
+
+### HTTP Request
+
+`DELETE https://yourdomain.com/wp-json/wppayform/v2/settings/coupon`
+
+### URL Parameters for first end point
+
+Parameter | type | Required | Description
+--------- | ---- | -------- | -----------
+coupon_id | int | true | ID of the coupon 

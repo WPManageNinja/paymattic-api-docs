@@ -24,130 +24,129 @@ curl "https://yourdomain.com/wp-json/wppayform/v2/form/{id}/entries" \
 
 ```json
 {
-  "success": true,
-    "data": {
-        "submissions": [
-            {
-                "id": 72,
-                "form_id": "29",
-                "user_id": "1",
-                "customer_id": null,
-                "customer_name": "ENIWeop5dD",
-                "customer_email": "1c5jc@k1zw.com",
-                "form_data_raw": {
-                    "__wpf_form_id": "29",
-                    "__wpf_current_url": "http://wp.test/?wp_paymentform_preview=29",
-                    "__wpf_current_page_id": "",
-                    "custom_payment_input": "512560",
-                    "customer_name": "ENIWeop5dD",
-                    "customer_name_1": "IA4IGMhVEY",
-                    "customer_email": "1c5jc@k1zw.com",
-                    "number": "034341",
-                    "address_input": {
-                        "address_line_1": "8ZgDyq1xEC",
-                        "address_line_2": "4iIftJAnDH",
-                        "city": "crVOXHdCP1",
-                        "state": "vyI8J5dZcU",
-                        "zip_code": "mB98SQ8j6W",
-                        "country": "AF"
-                    },
-                    "__stripe_payment_method_id": "pm_1LPP4yIyGOUknw8lkvqYV2gC"
-                },
-                "form_data_formatted":
-                 {
-                    "customer_name": "ENIWeop5dD",
-                    "customer_name_1": "IA4IGMhVEY",
-                    "customer_email": "1c5jc@k1zw.com",
-                    "number": "034341",
-                    "address_input": "8ZgDyq1xEC, 4iIftJAnDH, crVOXHdCP1, vyI8J5dZcU, mB98SQ8j6W, Afghanistan"
-                },
-                "currency": "USD",
-                "payment_status": "paid",
-                "submission_hash": "wpf_165874704462de78a4a943d134",
-                "payment_total": 51256000,
-                "payment_mode": "test",
-                "payment_method": "stripe",
-                "status": "new",
-                "ip_address": "127.0.0.1",
-                "browser": "Chrome",
-                "device": "Apple",
-                "city": null,
-                "country": null,
-                "created_at": "2022-07-25 11:04:04",
-                "updated_at": "2022-07-25 11:04:08",
-                "post_title": "Credit Card Donation Form (#29)",
-                "currencySettings": {
-                    "currency": "USD",
-                    "locale": "auto",
-                    "currency_sign_position": "left",
-                    "currency_separator": "dot_comma",
-                    "decimal_points": 0,
-                    "settings_type": "global",
-                    "is_zero_decimal": false,
-                    "currency_sign": "&#36;"
-                }
+   "success":true,
+   "data":{
+      "submissions":[
+         {
+            "id":72,
+            "form_id":"29",
+            "user_id":"1",
+            "customer_id":null,
+            "customer_name":"ENIWeop5dD",
+            "customer_email":"1c5jc@k1zw.com",
+            "form_data_raw":{
+               "__wpf_form_id":"29",
+               "__wpf_current_url":"http://wp.test/?wp_paymentform_preview=29",
+               "__wpf_current_page_id":"",
+               "custom_payment_input":"512560",
+               "customer_name":"ENIWeop5dD",
+               "customer_name_1":"IA4IGMhVEY",
+               "customer_email":"1c5jc@k1zw.com",
+               "number":"034341",
+               "address_input":{
+                  "address_line_1":"8ZgDyq1xEC",
+                  "address_line_2":"4iIftJAnDH",
+                  "city":"crVOXHdCP1",
+                  "state":"vyI8J5dZcU",
+                  "zip_code":"mB98SQ8j6W",
+                  "country":"AF"
+               },
+               "__stripe_payment_method_id":"pm_1LPP4yIyGOUknw8lkvqYV2gC"
             },
-            {
-                "id": 71,
-                "form_id": "29",
-                "user_id": "1",
-                "customer_id": null,
-                "customer_name": "arQcun2rs4",
-                "customer_email": "1c5jc@k1zw.com",
-                "form_data_raw": {
-                    "__wpf_form_id": "29",
-                    "__wpf_current_url": "http://wp.test/?wp_paymentform_preview=29",
-                    "__wpf_current_page_id": "",
-                    "custom_payment_input": "857256",
-                    "customer_name": "arQcun2rs4",
-                    "customer_name_1": "IA4IGMhVEY",
-                    "customer_email": "1c5jc@k1zw.com",
-                    "number": "960626",
-                    "address_input": {
-                        "address_line_1": "ZADnMPsvVf",
-                        "address_line_2": "CUxW3y53X0",
-                        "city": "nydm5OvArI",
-                        "state": "LBooT59e2y",
-                        "zip_code": "b6PTKElzMw",
-                        "country": "AF"
-                    },
-                    "__stripe_payment_method_id": "pm_1LOJDcIyGOUknw8lxpdXF5C6"
-                },
-                "form_data_formatted": {
-                    "customer_name": "arQcun2rs4",
-                    "customer_name_1": "IA4IGMhVEY",
-                    "customer_email": "1c5jc@k1zw.com",
-                    "number": "960626",
-                    "address_input": "ZADnMPsvVf, CUxW3y53X0, nydm5OvArI, LBooT59e2y, b6PTKElzMw, Afghanistan"
-                },
-                "currency": "USD",
-                "payment_status": "paid",
-                "submission_hash": "wpf_165848618962da7dad15ff2135",
-                "payment_total": 85725600,
-                "payment_mode": "test",
-                "payment_method": "stripe",
-                "status": "new",
-                "ip_address": "127.0.0.1",
-                "browser": "Chrome",
-                "device": "Apple",
-                "city": null,
-                "country": null,
-                "created_at": "2022-05-06 10:36:29",
-                "updated_at": "2022-05-22 10:36:32",
-                "post_title": "Credit Card Donation Form (#29)",
-                "currencySettings": {
-                "currency": "USD",
-                "locale": "auto",
-                "currency_sign_position": "left",
-                "currency_separator": "dot_comma",
-                "decimal_points": 0,
-                "settings_type": "global",
-                "is_zero_decimal": false,
-                "currency_sign": "&#36;"
+            "form_data_formatted":{
+               "customer_name":"ENIWeop5dD",
+               "customer_name_1":"IA4IGMhVEY",
+               "customer_email":"1c5jc@k1zw.com",
+               "number":"034341",
+               "address_input":"8ZgDyq1xEC, 4iIftJAnDH, crVOXHdCP1, vyI8J5dZcU, mB98SQ8j6W, Afghanistan"
+            },
+            "currency":"USD",
+            "payment_status":"paid",
+            "submission_hash":"wpf_165874704462de78a4a943d134",
+            "payment_total":51256000,
+            "payment_mode":"test",
+            "payment_method":"stripe",
+            "status":"new",
+            "ip_address":"127.0.0.1",
+            "browser":"Chrome",
+            "device":"Apple",
+            "city":null,
+            "country":null,
+            "created_at":"2022-07-25 11:04:04",
+            "updated_at":"2022-07-25 11:04:08",
+            "post_title":"Credit Card Donation Form (#29)",
+            "currencySettings":{
+               "currency":"USD",
+               "locale":"auto",
+               "currency_sign_position":"left",
+               "currency_separator":"dot_comma",
+               "decimal_points":0,
+               "settings_type":"global",
+               "is_zero_decimal":false,
+               "currency_sign":"&#36;"
             }
+         },
+         {
+            "id":71,
+            "form_id":"29",
+            "user_id":"1",
+            "customer_id":null,
+            "customer_name":"arQcun2rs4",
+            "customer_email":"1c5jc@k1zw.com",
+            "form_data_raw":{
+               "__wpf_form_id":"29",
+               "__wpf_current_url":"http://wp.test/?wp_paymentform_preview=29",
+               "__wpf_current_page_id":"",
+               "custom_payment_input":"857256",
+               "customer_name":"arQcun2rs4",
+               "customer_name_1":"IA4IGMhVEY",
+               "customer_email":"1c5jc@k1zw.com",
+               "number":"960626",
+               "address_input":{
+                  "address_line_1":"ZADnMPsvVf",
+                  "address_line_2":"CUxW3y53X0",
+                  "city":"nydm5OvArI",
+                  "state":"LBooT59e2y",
+                  "zip_code":"b6PTKElzMw",
+                  "country":"AF"
+               },
+               "__stripe_payment_method_id":"pm_1LOJDcIyGOUknw8lxpdXF5C6"
             },
-        ]
-    }
+            "form_data_formatted":{
+               "customer_name":"arQcun2rs4",
+               "customer_name_1":"IA4IGMhVEY",
+               "customer_email":"1c5jc@k1zw.com",
+               "number":"960626",
+               "address_input":"ZADnMPsvVf, CUxW3y53X0, nydm5OvArI, LBooT59e2y, b6PTKElzMw, Afghanistan"
+            },
+            "currency":"USD",
+            "payment_status":"paid",
+            "submission_hash":"wpf_165848618962da7dad15ff2135",
+            "payment_total":85725600,
+            "payment_mode":"test",
+            "payment_method":"stripe",
+            "status":"new",
+            "ip_address":"127.0.0.1",
+            "browser":"Chrome",
+            "device":"Apple",
+            "city":null,
+            "country":null,
+            "created_at":"2022-05-06 10:36:29",
+            "updated_at":"2022-05-22 10:36:32",
+            "post_title":"Credit Card Donation Form (#29)",
+            "currencySettings":{
+               "currency":"USD",
+               "locale":"auto",
+               "currency_sign_position":"left",
+               "currency_separator":"dot_comma",
+               "decimal_points":0,
+               "settings_type":"global",
+               "is_zero_decimal":false,
+               "currency_sign":"&#36;"
+            }
+         }
+      ]
+   }
 }
 ```
 
@@ -283,99 +282,115 @@ curl "https://yourdomain.com/wp-json/wppayform/v2/form/{id}/entries/{entryId}" \
 
 ```json
 {
-  "success": true,
-  "data": {
-    "submission": {
-        "id": 1,
-        "form_id": "8",
-        "user_id": "1",
-        "customer_id": null,
-        "customer_name": "tupsfrXOcd",
-        "customer_email": "bdbhg@tl1w.com",
-        "form_data_raw": {
-            "__wpf_form_id": "8",
-            "__wpf_current_url": "http://wp.test/?wp_paymentform_preview=8",
-            "__wpf_current_page_id": "",
-            "customer_name": "tupsfrXOcd",
-            "customer_email": "bdbhg@tl1w.com",
-            "text": "tRndFZTPqS",
-            "textarea": "niKtsJAW3O"
-        },
-        "form_data_formatted": {
-            "customer_name": "tupsfrXOcd",
-            "customer_email": "bdbhg@tl1w.com",
-            "text": "tRndFZTPqS",
-            "textarea": "niKtsJAW3O"
-        },
-        "currency": "USD",
-        "payment_status": "pending",
-        "submission_hash": "wpf_165829447062d790c6e1977395",
-        "payment_total": "0",
-        "payment_mode": null,
-        "payment_method": "",
-        "status": "read",
-        "ip_address": "127.0.0.1",
-        "browser": "Chrome",
-        "device": "Apple",
-        "city": null,
-        "country": null,
-        "created_at": "2022-07-20 05:21:10",
-        "updated_at": "2022-07-27 07:29:30",
-        "post_title": "Contact Form (#8)",
-        "user_profile_url": "",
-        "transactions": [],
-        "order_items": [],
-        "discounts": {
-        "applied": [],
-        "total": 0,
-        "percent": 0
-        },
-        "tax_items": [],
-        "activities": [],
-        "refunds": [],
-        "refundTotal": 0,
-        "currencySetting": {
-        "currency": "USD",
-        "locale": "auto",
-        "currency_sign_position": "left",
-        "currency_separator": "dot_comma",
-        "decimal_points": 0,
-        "settings_type": "global",
-        "is_zero_decimal": false,
-        "currency_sign": "&#36;"
-        },
-        "user": {
-            "display_name": "elias",
-            "email": "elias@gmail.com",
-            "profile_url": ""
-        },
-        "subscription_payment_total": 0,
-        "subscriptions": [],
-        "widgets": []
-        },
-        "entry": {
-            "customer_name": {
-                "label": "Name",
-                "value": "tupsfrXOcd",
-                "type": "customer_name"
-            },
-            "customer_email": {
-                "label": "Email Address",
-                "value": "bdbhg@tl1w.com",
-                "type": "customer_email"
-            },
-            "text": {
-                "label": "Subject",
-                "value": "tRndFZTPqS",
-                "type": "text"
-            },
-            "textarea": {
-                "label": "Your Message",
-                "value": "niKtsJAW3O",
-                "type": "textarea"
-            }
-        }
-    }
+   "success":true,
+   "data":{
+      "submission":{
+         "id":1,
+         "form_id":"8",
+         "user_id":"1",
+         "customer_id":null,
+         "customer_name":"tupsfrXOcd",
+         "customer_email":"bdbhg@tl1w.com",
+         "form_data_raw":{
+            "__wpf_form_id":"8",
+            "__wpf_current_url":"http://wp.test/?wp_paymentform_preview=8",
+            "__wpf_current_page_id":"",
+            "customer_name":"tupsfrXOcd",
+            "customer_email":"bdbhg@tl1w.com",
+            "text":"tRndFZTPqS",
+            "textarea":"niKtsJAW3O"
+         },
+         "form_data_formatted":{
+            "customer_name":"tupsfrXOcd",
+            "customer_email":"bdbhg@tl1w.com",
+            "text":"tRndFZTPqS",
+            "textarea":"niKtsJAW3O"
+         },
+         "currency":"USD",
+         "payment_status":"pending",
+         "submission_hash":"wpf_165829447062d790c6e1977395",
+         "payment_total":"0",
+         "payment_mode":null,
+         "payment_method":"",
+         "status":"read",
+         "ip_address":"127.0.0.1",
+         "browser":"Chrome",
+         "device":"Apple",
+         "city":null,
+         "country":null,
+         "created_at":"2022-07-20 05:21:10",
+         "updated_at":"2022-07-27 07:29:30",
+         "post_title":"Contact Form (#8)",
+         "user_profile_url":"",
+         "transactions":[
+            
+         ],
+         "order_items":[
+            
+         ],
+         "discounts":{
+            "applied":[
+               
+            ],
+            "total":0,
+            "percent":0
+         },
+         "tax_items":[
+            
+         ],
+         "activities":[
+            
+         ],
+         "refunds":[
+            
+         ],
+         "refundTotal":0,
+         "currencySetting":{
+            "currency":"USD",
+            "locale":"auto",
+            "currency_sign_position":"left",
+            "currency_separator":"dot_comma",
+            "decimal_points":0,
+            "settings_type":"global",
+            "is_zero_decimal":false,
+            "currency_sign":"&#36;"
+         },
+         "user":{
+            "display_name":"elias",
+            "email":"elias@gmail.com",
+            "profile_url":""
+         },
+         "subscription_payment_total":0,
+         "subscriptions":[
+            
+         ],
+         "widgets":[
+            
+         ]
+      },
+      "entry":{
+         "customer_name":{
+            "label":"Name",
+            "value":"tupsfrXOcd",
+            "type":"customer_name"
+         },
+         "customer_email":{
+            "label":"Email Address",
+            "value":"bdbhg@tl1w.com",
+            "type":"customer_email"
+         },
+         "text":{
+            "label":"Subject",
+            "value":"tRndFZTPqS",
+            "type":"text"
+         },
+         "textarea":{
+            "label":"Your Message",
+            "value":"niKtsJAW3O",
+            "type":"textarea"
+         }
+      }
+   }
 }
 ```
 

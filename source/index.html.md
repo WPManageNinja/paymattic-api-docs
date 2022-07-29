@@ -5,7 +5,6 @@ language_tabs: # must be one of https://git.io/vQNgJ
   - shell
   - php
   - python
-  - javascript
 
 toc_footers:
   - <a href='#'>Sign Up for a Developer Key</a>
@@ -16,6 +15,7 @@ includes:
   - settings
   - entries
   - integrations
+  - reports
   - errors
 
 search: true
