@@ -15,6 +15,7 @@ includes:
   - settings
   - entries
   - integrations
+  - payments
   - reports
   - errors
 
@@ -60,7 +61,7 @@ Once you create your Application Password in WordPress, Add Authorization Header
 
 In the basic auth username section use your WP Username and in the password section use the created Application Password.
 
-`Api Base URL: https://yourdomain.com/wp-json/wppayform/v2`
+__Api Base URL__: `https://yourdomain.com/wp-json/wppayform/v2`
 
 <aside class="notice">
 You must replace <code>yourdomain.com</code> with your domain name.

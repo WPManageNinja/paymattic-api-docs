@@ -88,12 +88,12 @@ This endpoint retrieves all forms.
 
 ### Query Parameters
 
-Parameter | Type | Description | Required | Default
---------- | -----| ----------- | -------- | ------
-per_page | int | Forms per page. | false | 20
-page | int | Page number of pagination | false | 1
-search | string | Search by forms title | false |
-order_type | string | ASC/DESC | false | ASC
+| Parameter  | Type   | Description               | Required | Default |
+| ---------- | ------ | ------------------------- | -------- | ------- |
+| per_page   | int    | Forms per page.           | false    | 20      |
+| page       | int    | Page number of pagination | false    | 1       |
+| search     | string | Search by forms title     | false    |
+| order_type | string | ASC/DESC                  | false    | ASC     |
 
 
 <aside class="success">Remember — Use authentication Headers</aside>
@@ -146,18 +146,18 @@ This first endpoint creates a new blank form. Using this endpoint you will be ab
 
 ### URL Parameters for first end point
 
-Parameter | type | Required | Description
---------- | ---- | -------- | -----------
-post_title | string | true | The title of the form
-template | string | true | Name of the form template
+| Parameter  | type   | Required | Description               |
+| ---------- | ------ | -------- | ------------------------- |
+| post_title | string | true     | The title of the form     |
+| template   | string | true     | Name of the form template |
 
 ### URL Parameters for second end point
 
-Parameter | type | Required | Description
---------- | ---- | -------- | -----------
-id | int | true | The newly created form id.
-builder_settings | json_string | true | All the fields and settings in a json string format
-submit_button_settings | json_string | true | Submit button settings in a json string format
+| Parameter              | type        | Required | Description                                         |
+| ---------------------- | ----------- | -------- | --------------------------------------------------- |
+| id                     | int         | true     | The newly created form id.                          |
+| builder_settings       | json_string | true     | All the fields and settings in a json string format |
+| submit_button_settings | json_string | true     | Submit button settings in a json string format      |
 
 ## Get a specific form
 
@@ -175,9 +175,6 @@ curl "https://yourdomain.com/wp-json/wppayform/v2/form/{id}" \
   -H "Request type: GET"
 ```
 
-```javascript
-
-```
 
 > The above command returns JSON structured like this:
 
@@ -220,9 +217,9 @@ The endpoint return a specific form in a json format. Using this endpoint you wi
 
 ### URL Parameters for first end point
 
-Parameter | type | Required | Description
---------- | ---- | -------- | -----------
-id | string | true | The specific form id
+| Parameter | type   | Required | Description          |
+| --------- | ------ | -------- | -------------------- |
+| id        | string | true     | The specific form id |
 
 ## Update a form
 
@@ -240,9 +237,6 @@ curl "https://yourdomain.com/wp-json/wppayform/v2/form/{id}" \
   -H "Request type: POST"
 ```
 
-```javascript
-
-```
 
 > The above command returns JSON structured like this:
 
@@ -260,11 +254,11 @@ The endpoint update a specific form. Using this endpoint you will get to update 
 
 ### URL Parameters for first end point
 
-Parameter | type | Required | Description
---------- | ---- | -------- | -----------
-id | int | true | The newly created form id.
-builder_settings | json_string | true | All the fields and settings in a json string format
-submit_button_settings | json_string | true | Submit button settings in a json string format
+| Parameter              | type        | Required | Description                                         |
+| ---------------------- | ----------- | -------- | --------------------------------------------------- |
+| id                     | int         | true     | The newly created form id.                          |
+| builder_settings       | json_string | true     | All the fields and settings in a json string format |
+| submit_button_settings | json_string | true     | Submit button settings in a json string format      |
 
 
 ## Delete a form
@@ -283,9 +277,6 @@ curl "https://yourdomain.com/wp-json/wppayform/v2/form/{id}" \
   -H "Request type: DELETE"
 ```
 
-```javascript
-
-```
 
 > The above command returns JSON structured like this:
 
@@ -303,9 +294,9 @@ The endpoint delete a specific form.
 
 ### URL Parameters for first end point
 
-Parameter | type | Required | Description
---------- | ---- | -------- | -----------
-id | string | true | The specific form id
+| Parameter | type   | Required | Description          |
+| --------- | ------ | -------- | -------------------- |
+| id        | string | true     | The specific form id |
 
 
 ## Get demo forms
@@ -324,9 +315,6 @@ curl "https://yourdomain.com/wp-json/wppayform/v2/forms/demo" \
   -H "Request type: GET"
 ```
 
-```javascript
-
-```
 
 > The above command returns JSON structured like this:
 
@@ -383,9 +371,6 @@ curl "https://yourdomain.com/wp-json/wppayform/v2/forms/formatted" \
   -H "Request type: GET"
 ```
 
-```javascript
-
-```
 
 > The above command returns JSON structured like this:
 
@@ -431,9 +416,6 @@ curl "https://yourdomain.com/wp-json/wppayform/v2/tools/form/{id}/export/" \
   -H "Request type: GET"
 ```
 
-```javascript
-
-```
 
 > The above command returns a downloadable json file:
 
@@ -446,9 +428,9 @@ This endpoint make a form get downloaded as a json file.
 
 ### URL Parameters for first end point
 
-Parameter | type | Required | Description
---------- | ---- | -------- | -----------
-id | string | true | The specific `form id`
+| Parameter | type   | Required | Description            |
+| --------- | ------ | -------- | ---------------------- |
+| id        | string | true     | The specific `form id` |
 
 
 
@@ -471,9 +453,6 @@ curl "https://yourdomain.com/wp-json/wppayform/v2/settings/coupon" \
   -H "Request type: GET"
 ```
 
-```javascript
-
-```
 
 > The above command return json structured like this.
 
@@ -527,11 +506,11 @@ This endpoint retrieves all available coupons.
 
 ### URL Parameters for first end point
 
-Parameter | type | Required | Description
---------- | ---- | -------- | -----------
-pagination | object | true | The pagination object consists of `per_page, current_page` fields.
-per_page | int | true | Ex: `per page - 15,20`
-current_page | int | true | Ex: `current page  - 1`
+| Parameter    | type   | Required | Description                                                        |
+| ------------ | ------ | -------- | ------------------------------------------------------------------ |
+| pagination   | object | true     | The pagination object consists of `per_page, current_page` fields. |
+| per_page     | int    | true     | Ex: `per page - 15,20`                                             |
+| current_page | int    | true     | Ex: `current page  - 1`                                            |
 
 ## Save coupons
 
@@ -550,9 +529,6 @@ curl "https://yourdomain.com/wp-json/wppayform/v2/settings/coupon" \
   -H "Request type: POST"
 ```
 
-```javascript
-
-```
 
 > The above command returns json structured like this.
 
@@ -571,17 +547,17 @@ This endpoint will create a coupon upon providing the required values.
 
 ### URL Parameters for first end point
 
-Parameter | type | Required | Description
---------- | ---- | -------- | -----------
-coupon | object | true | In coupon object consists `title, code, amount, coupon_type, status, start_date, expire_date, settings ` fields.
-title | string | true | Title of the coupon.
-code | string | true | Unique coupon code.
-coupon_type | string | true | Coupon type `percent, fixed`.
-amount | int | true | Coupon percentage.
-status | string | true | The coupon status `active, inactive`
-settings | object | true | Allowed form ids will be included in settings, default: [].
-start_date| date | false | Coupon starting date.
-expire_date | date | false | Couon expire Date.
+| Parameter   | type   | Required | Description                                                                                                      |
+| ----------- | ------ | -------- | ---------------------------------------------------------------------------------------------------------------- |
+| coupon      | object | true     | In coupon object consists `title, code, amount, coupon_type, status, start_date, expire_date, settings ` fields. |
+| title       | string | true     | Title of the coupon.                                                                                             |
+| code        | string | true     | Unique coupon code.                                                                                              |
+| coupon_type | string | true     | Coupon type `percent, fixed`.                                                                                    |
+| amount      | int    | true     | Coupon percentage.                                                                                               |
+| status      | string | true     | The coupon status `active, inactive`                                                                             |
+| settings    | object | true     | Allowed form ids will be included in settings, default: [].                                                      |
+| start_date  | date   | false    | Coupon starting date.                                                                                            |
+| expire_date | date   | false    | Couon expire Date.                                                                                               |
 
 ## Delete a coupon
 
@@ -599,9 +575,6 @@ curl "https://yourdomain.com/wp-json/wppayform/v2/settings/coupon" \
   -H "Request type: DELETE"
 ```
 
-```javascript
-
-```
 
 > The above command returns json structured like this:
 
@@ -620,6 +593,6 @@ This endpoint delete a coupon upon providing the coupon id.
 
 ### URL Parameters for first end point
 
-Parameter | type | Required | Description
---------- | ---- | -------- | -----------
-coupon_id | int | true | ID of the coupon 
+| Parameter | type | Required | Description      |
+| --------- | ---- | -------- | ---------------- |
+| coupon_id | int  | true     | ID of the coupon |

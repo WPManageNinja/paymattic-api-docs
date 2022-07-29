@@ -16,9 +16,6 @@ curl "https://yourdomain.com/wp-json/wppayform/v2/form/{id}/entries" \
   -H "Request type: GET"
 ```
 
-```javascript
-
-```
 
 > The above command returns  json structured like this:
 
@@ -158,14 +155,14 @@ This endpoint return all the entries/submissions for the given form id.
 
 ### URL parameters
 
-Parameter | type | Required | Description
---------- | ---- | -------- | -----------
-id | int | true | The `form ID` which entries you are gonna fetch
-per_page | int | flase | Forms per page ex: 15, 20
-page | int | false | Page number of pagination
-search_string | string | false | Search by form title
-payment_status | string | false | ex: `paid, pending, failed` 
-status | string | false | ex: `read, unread` 
+| Parameter      | type   | Required | Description                                     |
+| -------------- | ------ | -------- | ----------------------------------------------- |
+| id             | int    | true     | The `form ID` which entries you are gonna fetch |
+| per_page       | int    | flase    | Forms per page ex: 15, 20                       |
+| page           | int    | false    | Page number of pagination                       |
+| search_string  | string | false    | Search by form title                            |
+| payment_status | string | false    | ex: `paid, pending, failed`                     |
+| status         | string | false    | ex: `read, unread`                              |
 
 ## Get a form reports
 
@@ -184,9 +181,6 @@ curl "https://yourdomain.com/wp-json/wppayform/v2/form/{id}/entries/reports" \
   -H "Request type: GET"
 ```
 
-```javascript
-
-```
 
 > The above command returns  json structured like this:
 
@@ -254,9 +248,9 @@ This endpoint generates reports for a specific form.
 
 ### URL parameters
 
-Parameter | type | Required | Description
---------- | ---- | -------- | -----------
-id | int | true | The `form ID`
+| Parameter | type | Required | Description   |
+| --------- | ---- | -------- | ------------- |
+| id        | int  | true     | The `form ID` |
 
 ## Get a specific entry
 
@@ -272,10 +266,6 @@ id | int | true | The `form ID`
 curl "https://yourdomain.com/wp-json/wppayform/v2/form/{id}/entries/{entryId}" \
   -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
   -H "Request type: GET"
-```
-
-```javascript
-
 ```
 
 > The above command returns  json structured like this:
@@ -402,10 +392,10 @@ This endpoint will return a specific entry for the given form id and entryID.
 
 ### URL paramaters
 
-Parameter | type | Required | Description
---------- | ---- | -------- | -----------
-id | int | true | The `form ID` of the entry
-entryId | int | true | The specific `entry id`
+| Parameter | type | Required | Description                |
+| --------- | ---- | -------- | -------------------------- |
+| id        | int  | true     | The `form ID` of the entry |
+| entryId   | int  | true     | The specific `entry id`    |
 
 
 ## Add note to an entry
@@ -424,10 +414,6 @@ curl "https://yourdomain.com/wp-json/wppayform/v2/form/{id}/entries/{entryId}/no
   -H "Request type: POST"
 ```
 
-```javascript
-
-```
-
 > The above command returns  json structured like this:
 
 ```json
@@ -444,12 +430,12 @@ This endpoint add a note to a specific entry.
 
 ### URL parameters
 
-Parameter | type | Required | Description
---------- | ---- | -------- | -----------
-id | int | true | The `form ID` of the entry
-entryId | int | true | The specific `entry id`
-note | string | true | The note.
-userId | int | true | Your wp userId
+| Parameter | type   | Required | Description                |
+| --------- | ------ | -------- | -------------------------- |
+| id        | int    | true     | The `form ID` of the entry |
+| entryId   | int    | true     | The specific `entry id`    |
+| note      | string | true     | The note.                  |
+| userId    | int    | true     | Your wp userId             |
 
 ## Delete note from entry
 
@@ -466,10 +452,6 @@ userId | int | true | Your wp userId
 curl "https://yourdomain.com/wp-json/wppayform/v2/form/{id}/entries/{entryId}/notes/{noteId}" \
   -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
   -H "Request type: DELETE"
-```
-
-```javascript
-
 ```
 
 > The above command returns  json structured like this:
@@ -489,11 +471,11 @@ This endpoint delete a note from a specific entry. With given entry id and note 
 
 ### URL parameters
 
-Parameter | type | Required | Description
---------- | ---- | -------- | -----------
-id | int | true | The `form ID` of the entry
-entryId | int | true | The specific `entry id`
-noteId | int | true | The specific `note id`
+| Parameter | type | Required | Description                |
+| --------- | ---- | -------- | -------------------------- |
+| id        | int  | true     | The `form ID` of the entry |
+| entryId   | int  | true     | The specific `entry id`    |
+| noteId    | int  | true     | The specific `note id`     |
 
 ## Change entry status
 
@@ -511,9 +493,6 @@ curl "https://yourdomain.com/wp-json/wppayform/v2/form/{id}/entries/{entryId}/st
   -H "Request type: POST"
 ```
 
-```javascript
-
-```
 
 > The above command returns  json structured like this:
 
@@ -532,11 +511,11 @@ This endpoint delete a note from a specific entry. With given entry id and note 
 
 ### URL parameters
 
-Parameter | type | Required | Description
---------- | ---- | -------- | -----------
-id | int | true | The `form ID` of the entry
-entryId | int | true | The specific `entry id`
-status | string | true | Entry `status`
+| Parameter | type   | Required | Description                |
+| --------- | ------ | -------- | -------------------------- |
+| id        | int    | true     | The `form ID` of the entry |
+| entryId   | int    | true     | The specific `entry id`    |
+| status    | string | true     | Entry `status`             |
 
 
 ## Remove entry
@@ -555,10 +534,6 @@ curl "https://yourdomain.com/wp-json/wppayform/v2/forms/entries/remove" \
   -H "Request type: DELETE"
 ```
 
-```javascript
-
-```
-
 > The above command returns  json structured like this:
 
 ```json
@@ -575,10 +550,10 @@ This end point removes/deletes an entry/submission for the given form id. You al
 
 ### URL parameters
 
-Parameter | type | Required | Description
---------- | ---- | -------- | -----------
-submission_id | int | true | The specific `entry id`
-form_id | int | true | The `form ID` of the entry
+| Parameter     | type | Required | Description                |
+| ------------- | ---- | -------- | -------------------------- |
+| submission_id | int  | true     | The specific `entry id`    |
+| form_id       | int  | true     | The `form ID` of the entry |
 
 ## Change payment status
 
@@ -596,9 +571,6 @@ curl "https://yourdomain.com/wp-json/wppayform/v2/forms/entries/{id}/pay-status"
   -H "Request type: PUT"
 ```
 
-```javascript
-
-```
 
 > The above command returns  json structured like this:
 
@@ -624,7 +596,7 @@ This end point change payment status of an specific entry. Given the entry/submi
 
 ### URL parameters
 
-Parameter | type | Required | Description
---------- | ---- | -------- | -----------
-submission_id | int | true | The specific `entry id`
-new_payment_status | string | true | The new payment status ex: `paid, pending, failed, refunded`.
+| Parameter          | type   | Required | Description                                                   |
+| ------------------ | ------ | -------- | ------------------------------------------------------------- |
+| submission_id      | int    | true     | The specific `entry id`                                       |
+| new_payment_status | string | true     | The new payment status ex: `paid, pending, failed, refunded`. |

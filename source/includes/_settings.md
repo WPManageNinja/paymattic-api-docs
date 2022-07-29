@@ -664,9 +664,6 @@ curl "https://yourdomain.com/wp-json/wppayform/v2/forms/settings/currencies" \
   -H "Request type: GET"
 ```
 
-```javascript
-
-```
 > The first command returns JSON structured like this:
 
 ```json
@@ -700,9 +697,6 @@ curl "https://yourdomain.com/wp-json/wppayform/v2/forms/settings/currencies" \
   -H "Request type: POST"
 ```
 
-```javascript
-
-```
 > The first command returns JSON structured like this:
 
 ```json
@@ -740,9 +734,6 @@ curl "https://yourdomain.com/wp-json/wppayform/v2/forms/settings/stripe" \
   -H "Request type: GET"
 ```
 
-```javascript
-
-```
 > The first command returns JSON structured like this:
 
 ```json
@@ -784,9 +775,6 @@ curl "https://yourdomain.com/wp-json/wppayform/v2/forms/settings/stripe" \
   -H "Request type: POST"
 ```
 
-```javascript
-
-```
 > The first command returns JSON structured like this:
 
 ```json
@@ -841,4 +829,109 @@ This endpoint return all global integration addons.
 ### Http request
 
 `GET https://yourdomain.com/wp-json/wppayform/v2/forms/settings/integrations`
+
+
+
+# License
+
+## license settings
+
+```php
+
+```
+
+```python
+
+```
+
+```shell
+curl "https://yourdomain.com/wp-json/wppayform/v2/license" \
+  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Request type: GET"
+```
+
+> The first command returns JSON structured like this:
+
+```json
+{
+    "price_id": "",
+    "expires": "",
+    "status": "unregistered",
+    "purchase_url": "https://wpmanageninja.com/downloads/wppayform-pro-wordpress-payments-form-builder/"
+}
+```
+
+This endpoint returns the License settings.
+
+### Http request
+
+`GET https://yourdomain.com/wp-json/wppayform/v2/license`
+
+## Save/Update license
+
+```php
+
+```
+
+```python
+
+```
+
+```shell
+curl "https://yourdomain.com/wp-json/wppayform/v2/license" \
+  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Request type: POST"
+```
+
+> The first command returns JSON structured like this:
+
+```json
+{
+    "message" : "Your license key has been successfully updated"
+}
+```
+
+This endpoint saves/updates license.
+
+### Http request
+
+`POST https://yourdomain.com/wp-json/wppayform/v2/license`
+
+### URL parameters
+
+
+| Parameter   | type   | Required | Description                             |
+| ----------- | ------ | -------- | --------------------------------------- |
+| license_key | string | true     | The given license key after purchasing. |
+
+## Deactivate license
+
+```php
+
+```
+
+```python
+
+```
+
+```shell
+curl "https://yourdomain.com/wp-json/wppayform/v2/license" \
+  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Request type: DELETE"
+```
+
+> The first command returns JSON structured like this:
+
+```json
+{
+    "message" : "Your license key has been successfully deactivated"
+}
+```
+
+This endpoint deactivate license.
+
+### Http request
+
+`DELETE https://yourdomain.com/wp-json/wppayform/v2/license`
+
 
