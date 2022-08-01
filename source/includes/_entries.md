@@ -161,8 +161,8 @@ This endpoint return all the entries/submissions for the given form id.
 | per_page       | int    | flase    | Forms per page ex: 15, 20                       |
 | page           | int    | false    | Page number of pagination                       |
 | search_string  | string | false    | Search by form title                            |
-| payment_status | string | false    | ex: `paid, pending, failed`                     |
-| status         | string | false    | ex: `read, unread`                              |
+| payment_status | string | false    | Values are:  `paid, pending, failed`                     |
+| status         | string | false    | Values are:  `read, unread`                              |
 
 ## Get a form reports
 
@@ -560,4 +560,4 @@ This end point change payment status of an specific entry. Given the entry/submi
 | Parameter          | type   | Required | Description                                                   |
 | ------------------ | ------ | -------- | ------------------------------------------------------------- |
 | submission_id      | int    | true     | The specific `entry id`                                       |
-| new_payment_status | string | true     | The new payment status ex: `paid, pending, failed, refunded`. |
+| new_payment_status | string | true     | The new payment status values are: `paid, pending, failed, refunded`. |

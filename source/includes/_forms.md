@@ -153,9 +153,9 @@ This first endpoint creates a new blank form. Using this endpoint you will be ab
 
 ### URL Parameters for second end point
 
-| Parameter              | type        | Required | Description                                         |
-| ---------------------- | ----------- | -------- | --------------------------------------------------- |
-| id                     | int         | true     | The newly created form id.                          |
+| Parameter              | type | Required | Description                                  |
+| ---------------------- | ---- | -------- | -------------------------------------------- |
+| id                     | int  | true     | The newly created form id.                   |
 | builder_settings       | json | true     | All the fields and settings in a json format |
 | submit_button_settings | json | true     | Submit button settings in a json format      |
 
@@ -254,11 +254,11 @@ The endpoint update a specific form. Using this endpoint you will get to update 
 
 ### URL Parameters for first end point
 
-| Parameter              | type        | Required | Description                                         |
-| ---------------------- | ----------- | -------- | --------------------------------------------------- |
-| id                     | int         | true     | The newly created form id.                          |
-| builder_settings       | json | true     | All the fields and settings in a json  format |
-| submit_button_settings | json | true     | Submit button settings in a json format      |
+| Parameter              | type        | Required | Description                                   |
+| ---------------------- | ----------- | -------- | --------------------------------------------- |
+| id                     | int         | true     | The newly created form id.                    |
+| builder_settings       | json object | true     | All the fields and settings in a json  format |
+| submit_button_settings | json object | true     | Submit button settings in a json  format      |
 
 
 ## Delete a form
@@ -547,17 +547,17 @@ This endpoint will create a coupon upon providing the required values.
 
 ### URL Parameters for first end point
 
-| Parameter   | type   | Required | Description                                                                                                      |
-| ----------- | ------ | -------- | ---------------------------------------------------------------------------------------------------------------- |
-| coupon      | object | true     | The coupon object consists of `title, code, amount, coupon_type, status, start_date, expire_date, settings ` fields. |
-| title       | string | true     | Title of the coupon.                                                                                             |
-| code        | string | true     | Unique coupon code.                                                                                              |
-| coupon_type | string | true     | Coupon type `percent, fixed`.                                                                                    |
-| amount      | int    | true     | Coupon percentage.                                                                                               |
-| status      | string | true     | The coupon status `active, inactive`                                                                             |
-| settings    | object | true     | Allowed form ids will be included in settings, default: [].                                                      |
-| start_date  | date   | false    | Coupon starting date.                                                                                            |
-| expire_date | date   | false    | Couon expire Date.                                                                                               |
+| Parameter   | type        | Required | Description                                                                                                          |
+| ----------- | ----------- | -------- | -------------------------------------------------------------------------------------------------------------------- |
+| coupon      | json object | true     | The coupon object consists of `title, code, amount, coupon_type, status, start_date, expire_date, settings ` fields. |
+| title       | string      | true     | Title of the coupon.                                                                                                 |
+| code        | string      | true     | Unique coupon code.                                                                                                  |
+| coupon_type | string      | true     | Coupon type `percent, fixed`.                                                                                        |
+| amount      | int         | true     | Coupon percentage.                                                                                                   |
+| status      | string      | true     | The coupon status `active, inactive`                                                                                 |
+| settings    | json object | true     | Allowed form ids will be included in settings, default: [].                                                          |
+| start_date  | date        | false    | Coupon starting date.                                                                                                |
+| expire_date | date        | false    | Couon expire Date.                                                                                                   |
 
 ## Delete a coupon
 

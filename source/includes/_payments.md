@@ -195,12 +195,12 @@ This endpoint save/update a specific payment method settings.
 
 ### URL parameters
 
-| Parameter    | type   | Required | Description                                                                      |
-| ------------ | ------ | -------- | -------------------------------------------------------------------------------- |
-| payMethod    | string | true     | The name of the payment method ex: `mollie, payrexx, square, paystack`           |
-| settings     | object | true     | The settings which consist of `payment_mode, test_api_key, live_api_key` fields. |
-| payment_mode | text   | true     | Modes are `live, test`                                                           |
-| test_api_key | object | true     | Test api key consist of `public key, secret key`.                                |
-| live_api_key | object | true     | Live api key consist of `public key, secret key`                                 |
+| Parameter    | type        | Required | Description                                                                      |
+| ------------ | ----------- | -------- | -------------------------------------------------------------------------------- |
+| payMethod    | string      | true     | The name of the payment method ex: `mollie, payrexx, square, paystack`           |
+| settings     | json object | true     | The settings which consist of `payment_mode, test_api_key, live_api_key` fields. |
+| payment_mode | text        | true     | Modes are `live, test`                                                           |
+| test_api_key | json object | true     | Test api key consist of `public key, secret key`.                                |
+| live_api_key | json object | true     | Live api key consist of `public key, secret key`                                 |
 
 

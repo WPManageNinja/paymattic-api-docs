@@ -7,7 +7,6 @@ language_tabs: # must be one of https://git.io/vQNgJ
   - python
 
 toc_footers:
-  - <a href='#'>Sign Up for a Developer Key</a>
   - <a href='https://paymattic.com/'>Documentation Powered by Paymattic</a>
 
 includes:

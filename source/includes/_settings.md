@@ -376,7 +376,7 @@ This endpoitn save the design settings of a form.
 | Parameter       | type | Required | Description                                                                                      |
 | --------------- | ---- | -------- | ------------------------------------------------------------------------------------------------ |
 | id              | int  | true     | The `form id`                                                                                    |
-| layout_settings | json | true     | Layout settings like `labelPlacement: top, asteriskPlacement: none, submit_button_position:left` |
+| layout_settings | json object | true     | Layout settings has fields `labelPlacement, asteriskPlacement, submit_button_position` |
 
 # Global Settings
 
