@@ -156,8 +156,8 @@ This first endpoint creates a new blank form. Using this endpoint you will be ab
 | Parameter              | type        | Required | Description                                         |
 | ---------------------- | ----------- | -------- | --------------------------------------------------- |
 | id                     | int         | true     | The newly created form id.                          |
-| builder_settings       | json_string | true     | All the fields and settings in a json string format |
-| submit_button_settings | json_string | true     | Submit button settings in a json string format      |
+| builder_settings       | json | true     | All the fields and settings in a json format |
+| submit_button_settings | json | true     | Submit button settings in a json format      |
 
 ## Get a specific form
 
@@ -257,8 +257,8 @@ The endpoint update a specific form. Using this endpoint you will get to update 
 | Parameter              | type        | Required | Description                                         |
 | ---------------------- | ----------- | -------- | --------------------------------------------------- |
 | id                     | int         | true     | The newly created form id.                          |
-| builder_settings       | json_string | true     | All the fields and settings in a json string format |
-| submit_button_settings | json_string | true     | Submit button settings in a json string format      |
+| builder_settings       | json | true     | All the fields and settings in a json  format |
+| submit_button_settings | json | true     | Submit button settings in a json format      |
 
 
 ## Delete a form
@@ -509,8 +509,8 @@ This endpoint retrieves all available coupons.
 | Parameter    | type   | Required | Description                                                        |
 | ------------ | ------ | -------- | ------------------------------------------------------------------ |
 | pagination   | object | true     | The pagination object consists of `per_page, current_page` fields. |
-| per_page     | int    | true     | Ex: `per page - 15,20`                                             |
-| current_page | int    | true     | Ex: `current page  - 1`                                            |
+| per_page     | int    | true     | Ex: `per page 15,20`                                               |
+| current_page | int    | true     | Ex: `current page  1`                                              |
 
 ## Save coupons
 
@@ -549,7 +549,7 @@ This endpoint will create a coupon upon providing the required values.
 
 | Parameter   | type   | Required | Description                                                                                                      |
 | ----------- | ------ | -------- | ---------------------------------------------------------------------------------------------------------------- |
-| coupon      | object | true     | In coupon object consists `title, code, amount, coupon_type, status, start_date, expire_date, settings ` fields. |
+| coupon      | object | true     | The coupon object consists of `title, code, amount, coupon_type, status, start_date, expire_date, settings ` fields. |
 | title       | string | true     | Title of the coupon.                                                                                             |
 | code        | string | true     | Unique coupon code.                                                                                              |
 | coupon_type | string | true     | Coupon type `percent, fixed`.                                                                                    |

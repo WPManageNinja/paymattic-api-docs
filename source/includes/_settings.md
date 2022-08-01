@@ -330,10 +330,10 @@ This endpoint saves the settings of a form.
 | Parameter             | type        | Required | Description                               |
 | --------------------- | ----------- | -------- | ----------------------------------------- |
 | id                    | int         | true     | The `form id`                             |
-| confirmation_settings | json string | false    | After form `submit confirmation settings` |
-| currency_settings     | json string | false    | `Currency settings` of the form           |
+| confirmation_settings | json | false    | After form `submit confirmation settings` |
+| currency_settings     | json | false    | `Currency settings` of the form           |
 | form_recaptcha_status | text        | false    | `Receptcha status` of the form            |
-| receipt_settings      | json string | false    | `Receipt settings` of the form            |
+| receipt_settings      | json | false    | `Receipt settings` of the form            |
 
 ## Get Form design settings
 
@@ -413,7 +413,7 @@ This endpoitn save the design settings of a form.
 | Parameter       | type        | Required | Description                                                                                      |
 | --------------- | ----------- | -------- | ------------------------------------------------------------------------------------------------ |
 | id              | int         | true     | The `form id`                                                                                    |
-| layout_settings | json string | true     | Layout settings like `labelPlacement: top, asteriskPlacement: none, submit_button_position:left` |
+| layout_settings | json | true     | Layout settings like `labelPlacement: top, asteriskPlacement: none, submit_button_position:left` |
 
 # Global Settings
 
@@ -645,7 +645,7 @@ This endpoint saves global currency settings.
 
 | Parameter            | type        | Required | Description           |
 | -------------------- | ----------- | -------- | --------------------- |
-| settings[`currecny`] | json string | true     | The currency settings |
+| settings | json object | true     | The currency settings | `settings` object has `currency` field
 
 
 ## Get access roles
@@ -793,7 +793,7 @@ This endpoint save stripe settings.
 
 | Parameter | type        | Required | Description                                                                                    |
 | --------- | ----------- | -------- | ---------------------------------------------------------------------------------------------- |
-| settings  | json string | true     | The settings - `payment_mode, test_public_key, test_secret_key, live_pub_key, live_secret_key` |
+| settings  | json | true     | The settings - `payment_mode, test_public_key, test_secret_key, live_pub_key, live_secret_key` |
 
 ## Get integrations 
 

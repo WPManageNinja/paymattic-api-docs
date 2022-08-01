@@ -55,7 +55,7 @@ curl "https://yourdomain.com/wp-json/wppayform/v2/forms" \
 
 > Make sure to replace API_USERNAME & API_PASSWORD with your UserName & API Password.
 
-Paymattic uses WordPress REST API. So you can use any authorization method that supports WordPress. The easiest way to connect is application password. To create a application password go to the `Users` and click on the user and create a new application password for this user so that this person can easily access the REST API endpoint by using WP Username & Application password in basic auth system.
+Paymattic uses WordPress REST API. So you can use any authorization method that supports WordPress. The easiest way to connect is application password. To create a application password go to the __Users__ and click on the user and create a new application password for this user so that this person can easily access the REST API endpoint by using WP Username & Application password in basic auth system.
 
 Once you create your Application Password in WordPress, Add Authorization Header to every request.
 
