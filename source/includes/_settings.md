@@ -296,44 +296,7 @@ This endpoint retrieves all the related settings of a form.
 | --------- | ---- | -------- | ------------- |
 | id        | int  | true     | The `form id` |
 
-## Save Form settings
 
-```php
-
-```
-
-```python
-
-```
-
-```shell
-curl "https://yourdomain.com/wp-json/wppayform/v2/form/{id}/settings" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
-  -H "Request type: POST"
-```
-> The first command returns JSON structured like this:
-
-```json
-{
-    "message": "Settings successfully updated"
-}
-```
-
-This endpoint saves the settings of a form.
-
-### Http request
-
-`POST https://yourdomain.com/wp-json/wppayform/v2/form/{id}/settings`
-
-### URL parameters
-
-| Parameter             | type        | Required | Description                               |
-| --------------------- | ----------- | -------- | ----------------------------------------- |
-| id                    | int         | true     | The `form id`                             |
-| confirmation_settings | json | false    | After form `submit confirmation settings` |
-| currency_settings     | json | false    | `Currency settings` of the form           |
-| form_recaptcha_status | text        | false    | `Receptcha status` of the form            |
-| receipt_settings      | json | false    | `Receipt settings` of the form            |
 
 ## Get Form design settings
 
@@ -410,9 +373,9 @@ This endpoitn save the design settings of a form.
 
 ### URL parameters
 
-| Parameter       | type        | Required | Description                                                                                      |
-| --------------- | ----------- | -------- | ------------------------------------------------------------------------------------------------ |
-| id              | int         | true     | The `form id`                                                                                    |
+| Parameter       | type | Required | Description                                                                                      |
+| --------------- | ---- | -------- | ------------------------------------------------------------------------------------------------ |
+| id              | int  | true     | The `form id`                                                                                    |
 | layout_settings | json | true     | Layout settings like `labelPlacement: top, asteriskPlacement: none, submit_button_position:left` |
 
 # Global Settings
@@ -643,9 +606,9 @@ This endpoint saves global currency settings.
 
 ### URL parameters
 
-| Parameter            | type        | Required | Description           |
-| -------------------- | ----------- | -------- | --------------------- |
-| settings | json object | true     | The currency settings | `settings` object has `currency` field
+| Parameter | type        | Required | Description           |
+| --------- | ----------- | -------- | --------------------- |
+| settings  | json object | true     | The currency settings | `settings` object has `currency` field |
 
 
 ## Get access roles
@@ -759,40 +722,14 @@ This endpoint return stripe settings.
 
 `GET https://yourdomain.com/wp-json/wppayform/v2/forms/settings/stripe`
 
-## Save stripe settings
-
-```php
-
-```
-
-```python
-
-```
-
-```shell
-curl "https://yourdomain.com/wp-json/wppayform/v2/forms/settings/stripe" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
-  -H "Request type: POST"
-```
-
-> The first command returns JSON structured like this:
-
-```json
-{
-   "message": "Settings successfully updated"
-}
-```
-
-This endpoint save stripe settings.
-
 ### Http request
 
 `POST https://yourdomain.com/wp-json/wppayform/v2/forms/settings/stripe`
 
 ### URL parameters
 
-| Parameter | type        | Required | Description                                                                                    |
-| --------- | ----------- | -------- | ---------------------------------------------------------------------------------------------- |
+| Parameter | type | Required | Description                                                                                    |
+| --------- | ---- | -------- | ---------------------------------------------------------------------------------------------- |
 | settings  | json | true     | The settings - `payment_mode, test_public_key, test_secret_key, live_pub_key, live_secret_key` |
 
 ## Get integrations 

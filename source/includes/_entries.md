@@ -398,45 +398,6 @@ This endpoint will return a specific entry for the given form id and entryID.
 | entryId   | int  | true     | The specific `entry id`    |
 
 
-## Add note to an entry
-
-```php
-
-```
-
-```python
-
-```
-
-```shell
-curl "https://yourdomain.com/wp-json/wppayform/v2/form/{id}/entries/{entryId}/notes" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
-  -H "Request type: POST"
-```
-
-> The above command returns  json structured like this:
-
-```json
-{
-    "message": "Note successfully added"
-}
-```
-
-This endpoint add a note to a specific entry.
-
-### Http request
-
-`POST https://yourdomain.com/wp-json/wppayform/v2/form/{id}/entries/{entryId}/notes`
-
-### URL parameters
-
-| Parameter | type   | Required | Description                |
-| --------- | ------ | -------- | -------------------------- |
-| id        | int    | true     | The `form ID` of the entry |
-| entryId   | int    | true     | The specific `entry id`    |
-| note      | string | true     | The note.                  |
-| userId    | int    | true     | Your wp userId             |
-
 ## Delete note from entry
 
 
