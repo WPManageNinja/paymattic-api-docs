@@ -80,3 +80,13 @@ Thanks to the following people who have submitted major pull requests:
 - [@cvkef](https://github.com/cvkef)
 
 Also, thanks to [Sauce Labs](http://saucelabs.com) for sponsoring the development of the responsive styles.
+
+
+## Building Slate
+To use Docker to just build your site, run:
+
+docker run --rm --name slate -v $(pwd)/build:/srv/slate/build -v $(pwd)/source:/srv/slate/source slatedocs/slate
+## Running Slate
+If you wish to run the development server for Slate to aid in working on the site, run:
+
+docker run --rm --name slate -p 4567:4567 -v $(pwd)/source:/srv/slate/source slatedocs/slate serve
