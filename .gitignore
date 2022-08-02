@@ -12,7 +12,6 @@ test/tmp
 test/version_tmp
 tmp
 *.DS_STORE
-build/
 .cache
 .vagrant
 .sass-cache
@@ -25,3 +24,4 @@ doc/
 
 # Vagrant artifacts
 ubuntu-*-console.log
+.DS_Store
