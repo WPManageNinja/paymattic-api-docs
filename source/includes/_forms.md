@@ -346,7 +346,7 @@ curl "https://yourdomain.com/wp-json/wppayform/v2/forms/demo" \
 }
 ```
 
-This endpoint return demo froms. Using this endpoint you will be able to get different demo forms. 
+This endpoint return demo froms. Using this endpoint you will be able to get different demo forms.
 
 
 ### HTTP Request
@@ -383,11 +383,11 @@ curl "https://yourdomain.com/wp-json/wppayform/v2/forms/formatted" \
         },
         {
             "ID": "34",
-            "post_title": "Contact Form (#34)"
+            "post_title": "Collect Donations(#34)"
         },
         {
             "ID": "33",
-            "post_title": "Blank Form (#33)"
+            "post_title": "Make a subscription (#33)"
         },
     ]
 }
