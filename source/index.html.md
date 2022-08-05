@@ -1,5 +1,5 @@
 ---
-title: API Reference
+title: Paymattic API Reference
 
 language_tabs: # must be one of https://git.io/vQNgJ
   - shell
@@ -7,7 +7,7 @@ language_tabs: # must be one of https://git.io/vQNgJ
   - python
 
 toc_footers:
-  - <a href='https://paymattic.com/'>Documentation Powered by Paymattic</a>
+  - <a href='https://paymattic.com/'>Get Paymattic</a>
 
 includes:
   - forms
@@ -24,7 +24,7 @@ code_clipboard: true
 
 meta:
   - name: description
-    content: Documentation for the Kittn API
+    content: Documentation for Paymattic WordPress plugin
 ---
 
 # Introduction
