@@ -1,6 +1,6 @@
-# Froms
+# Forms
 
-## Get All Froms
+## Get All Forms
 
 ```php
 
