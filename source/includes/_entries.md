@@ -159,7 +159,7 @@ This endpoint return all the entries/submissions for the given form id.
 | -------------- | ------ | -------- | ----------------------------------------------- |
 | id             | int    | true     | The `form ID` which entries you are gonna fetch |
 | per_page       | int    | flase    | Forms per page ex: 15, 20                       |
-| page           | int    | false    | Page number of pagination                       |
+| page_number          | int    | false    | Page number of pagination                       |
 | search_string  | string | false    | Search by form title                            |
 | payment_status | string | false    | Values are:  `paid, pending, failed`                     |
 | status         | string | false    | Values are:  `read, unread`                              |
