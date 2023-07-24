@@ -158,9 +158,9 @@ This endpoint return all the entries/submissions for the given form id.
 | Parameter      | type   | Required | Description                                     |
 | -------------- | ------ | -------- | ----------------------------------------------- |
 | id             | int    | true     | The `form ID` which entries you are gonna fetch |
-| per_page       | int    | flase    | Forms per page ex: 15, 20                       |
+| per_page       | int    | flase    | Entries per page ex: 15, 20                       |
 | page_number          | int    | false    | Page number of pagination                       |
-| search_string  | string | false    | Search by form title                            |
+| search_string  | string | false    | Search by cutsomer_name,customer_email,payment method                           |
 | payment_status | string | false    | Values are:  `paid, pending, failed`                     |
 | status         | string | false    | Values are:  `read, unread`                              |
 
