@@ -530,12 +530,12 @@
 </blockquote>
 <div class="highlight"><pre class="highlight php tab-php"><code>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
+</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request, Basic Auth credentials need to be base64 encoded.</span>
 curl <span class="s2">"https://yourdomain.com/wp-json/wppayform/v2/forms"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC API_USERNAME:API_PASSWORD"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: Basic </span><span class="si">$(</span><span class="nb">echo</span> <span class="nt">-n</span> <span class="s1">'USERNAME:APPLICATION_PASSWORD'</span> | <span class="nb">base64</span><span class="si">)</span><span class="s2">"</span>
 </code></pre></div>
 <blockquote>
-<p>Make sure to replace API_USERNAME &amp; API_PASSWORD with your UserName &amp; API Password.</p>
+<p>Make sure to replace USERNAME &amp; APPLICATION_PASSWORD with your username &amp; application password and have base64 encoded.</p>
 </blockquote>
 
 <p>Paymattic uses WordPress REST API. So you can use any authorization method that supports WordPress. The easiest way to connect is application password. To create a application password go to the <strong>Users</strong> and click on the user and create a new application password for this user so that this person can easily access the REST API endpoint by using WP Username &amp; Application password in basic auth system.</p>
@@ -552,7 +552,7 @@ You must replace <code>yourdomain.com</code> with your domain name.
 <h1 id='forms'>Forms</h1><h2 id='get-all-forms'>Get All Forms</h2><div class="highlight"><pre class="highlight php tab-php"><code>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://yourdomain.com/wp-json/wppayform/v2/forms"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC API_USERNAME:API_PASSWORD"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC USERNAME:APPLICATION_PASSWORD"</span>
 </code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code>
 </code></pre></div>
 <blockquote>
@@ -662,7 +662,7 @@ You must replace <code>yourdomain.com</code> with your domain name.
 <h2 id='create-a-form'>Create a form</h2><div class="highlight"><pre class="highlight php tab-php"><code>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://yourdomain.com/wp-json/wppayform/v2/forms"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC API_USERNAME:API_PASSWORD"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC USERNAME:APPLICATION_PASSWORD"</span>
   <span class="nt">-H</span> <span class="s2">"Request type: POST"</span>
 </code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code>
 </code></pre></div>
@@ -739,7 +739,7 @@ You must replace <code>yourdomain.com</code> with your domain name.
 <h2 id='get-a-specific-form'>Get a specific form</h2><div class="highlight"><pre class="highlight php tab-php"><code>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://yourdomain.com/wp-json/wppayform/v2/form/{id}"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC API_USERNAME:API_PASSWORD"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC USERNAME:APPLICATION_PASSWORD"</span>
   <span class="nt">-H</span> <span class="s2">"Request type: GET"</span>
 </code></pre></div>
 <blockquote>
@@ -796,7 +796,7 @@ You must replace <code>yourdomain.com</code> with your domain name.
 <h2 id='update-a-form'>Update a form</h2><div class="highlight"><pre class="highlight php tab-php"><code>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://yourdomain.com/wp-json/wppayform/v2/form/{id}"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC API_USERNAME:API_PASSWORD"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC USERNAME:APPLICATION_PASSWORD"</span>
   <span class="nt">-H</span> <span class="s2">"Request type: POST"</span>
 </code></pre></div>
 <blockquote>
@@ -840,7 +840,7 @@ You must replace <code>yourdomain.com</code> with your domain name.
 <h2 id='delete-a-form'>Delete a form</h2><div class="highlight"><pre class="highlight php tab-php"><code>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://yourdomain.com/wp-json/wppayform/v2/form/{id}"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC API_USERNAME:API_PASSWORD"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC USERNAME:APPLICATION_PASSWORD"</span>
   <span class="nt">-H</span> <span class="s2">"Request type: DELETE"</span>
 </code></pre></div>
 <blockquote>
@@ -872,7 +872,7 @@ You must replace <code>yourdomain.com</code> with your domain name.
 <h2 id='get-demo-forms'>Get demo forms</h2><div class="highlight"><pre class="highlight php tab-php"><code>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://yourdomain.com/wp-json/wppayform/v2/forms/demo"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC API_USERNAME:API_PASSWORD"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC USERNAME:APPLICATION_PASSWORD"</span>
   <span class="nt">-H</span> <span class="s2">"Request type: GET"</span>
 </code></pre></div>
 <blockquote>
@@ -912,7 +912,7 @@ You must replace <code>yourdomain.com</code> with your domain name.
 <h2 id='list-of-available-forms'>List of available forms</h2><div class="highlight"><pre class="highlight php tab-php"><code>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://yourdomain.com/wp-json/wppayform/v2/forms/formatted"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC API_USERNAME:API_PASSWORD"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC USERNAME:APPLICATION_PASSWORD"</span>
   <span class="nt">-H</span> <span class="s2">"Request type: GET"</span>
 </code></pre></div>
 <blockquote>
@@ -941,7 +941,7 @@ You must replace <code>yourdomain.com</code> with your domain name.
 <h2 id='export-a-form'>Export a form</h2><div class="highlight"><pre class="highlight php tab-php"><code>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://yourdomain.com/wp-json/wppayform/v2/tools/form/{id}/export/"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC API_USERNAME:API_PASSWORD"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC USERNAME:APPLICATION_PASSWORD"</span>
   <span class="nt">-H</span> <span class="s2">"Request type: GET"</span>
 </code></pre></div>
 <blockquote>
@@ -970,7 +970,7 @@ You must replace <code>yourdomain.com</code> with your domain name.
 <h1 id='coupons'>Coupons</h1><h2 id='get-coupons'>Get coupons</h2><div class="highlight"><pre class="highlight php tab-php"><code>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://yourdomain.com/wp-json/wppayform/v2/settings/coupon"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC API_USERNAME:API_PASSWORD"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC USERNAME:APPLICATION_PASSWORD"</span>
   <span class="nt">-H</span> <span class="s2">"Request type: GET"</span>
 </code></pre></div>
 <blockquote>
@@ -1049,7 +1049,7 @@ You must replace <code>yourdomain.com</code> with your domain name.
 <h2 id='save-coupons'>Save coupons</h2><div class="highlight"><pre class="highlight php tab-php"><code>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://yourdomain.com/wp-json/wppayform/v2/settings/coupon"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC API_USERNAME:API_PASSWORD"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC USERNAME:APPLICATION_PASSWORD"</span>
   <span class="nt">-H</span> <span class="s2">"Request type: POST"</span>
 </code></pre></div>
 <blockquote>
@@ -1129,7 +1129,7 @@ You must replace <code>yourdomain.com</code> with your domain name.
 <h2 id='delete-a-coupon'>Delete a coupon</h2><div class="highlight"><pre class="highlight php tab-php"><code>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://yourdomain.com/wp-json/wppayform/v2/settings/coupon"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC API_USERNAME:API_PASSWORD"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC USERNAME:APPLICATION_PASSWORD"</span>
   <span class="nt">-H</span> <span class="s2">"Request type: DELETE"</span>
 </code></pre></div>
 <blockquote>
@@ -1161,7 +1161,7 @@ You must replace <code>yourdomain.com</code> with your domain name.
 <h1 id='form-settings'>Form Settings</h1><h2 id='get-form-settings'>Get Form settings</h2><div class="highlight"><pre class="highlight php tab-php"><code>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://yourdomain.com/wp-json/wppayform/v2/form/{id}/settings"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC API_USERNAME:API_PASSWORD"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC USERNAME:APPLICATION_PASSWORD"</span>
   <span class="nt">-H</span> <span class="s2">"Request type: GET"</span>
 </code></pre></div>
 <blockquote>
@@ -1454,7 +1454,7 @@ You must replace <code>yourdomain.com</code> with your domain name.
 <h2 id='get-form-design-settings'>Get Form design settings</h2><div class="highlight"><pre class="highlight php tab-php"><code>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://yourdomain.com/wp-json/wppayform/v2/form/{id}/settings/design"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC API_USERNAME:API_PASSWORD"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC USERNAME:APPLICATION_PASSWORD"</span>
   <span class="nt">-H</span> <span class="s2">"Request type: GET"</span>
 </code></pre></div>
 <blockquote>
@@ -1494,7 +1494,7 @@ You must replace <code>yourdomain.com</code> with your domain name.
 <h2 id='save-form-design-settings'>Save Form design settings</h2><div class="highlight"><pre class="highlight php tab-php"><code>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://yourdomain.com/wp-json/wppayform/v2/form/{id}/settings/design"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC API_USERNAME:API_PASSWORD"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC USERNAME:APPLICATION_PASSWORD"</span>
   <span class="nt">-H</span> <span class="s2">"Request type: POST"</span>
 </code></pre></div>
 <blockquote>
@@ -1532,7 +1532,7 @@ You must replace <code>yourdomain.com</code> with your domain name.
 <h1 id='global-settings'>Global Settings</h1><h2 id='get-currency-settings'>Get currency settings</h2><div class="highlight"><pre class="highlight php tab-php"><code>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://yourdomain.com/wp-json/wppayform/v2/forms/settings/currencies"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC API_USERNAME:API_PASSWORD"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC USERNAME:APPLICATION_PASSWORD"</span>
   <span class="nt">-H</span> <span class="s2">"Request type: GET"</span>
 </code></pre></div>
 <blockquote>
@@ -1711,7 +1711,7 @@ You must replace <code>yourdomain.com</code> with your domain name.
 <h2 id='save-global-currency-settings'>Save global currency settings</h2><div class="highlight"><pre class="highlight php tab-php"><code>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://yourdomain.com/wp-json/wppayform/v2/forms/settings/currencies"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC API_USERNAME:API_PASSWORD"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC USERNAME:APPLICATION_PASSWORD"</span>
   <span class="nt">-H</span> <span class="s2">"Request type: POST"</span>
 </code></pre></div>
 <blockquote>
@@ -1743,7 +1743,7 @@ You must replace <code>yourdomain.com</code> with your domain name.
 <h2 id='get-access-roles'>Get access roles</h2><div class="highlight"><pre class="highlight php tab-php"><code>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://yourdomain.com/wp-json/wppayform/v2/forms/settings/currencies"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC API_USERNAME:API_PASSWORD"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC USERNAME:APPLICATION_PASSWORD"</span>
   <span class="nt">-H</span> <span class="s2">"Request type: GET"</span>
 </code></pre></div>
 <blockquote>
@@ -1762,7 +1762,7 @@ You must replace <code>yourdomain.com</code> with your domain name.
 <h2 id='set-access-roles'>Set access roles</h2><div class="highlight"><pre class="highlight php tab-php"><code>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://yourdomain.com/wp-json/wppayform/v2/forms/settings/currencies"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC API_USERNAME:API_PASSWORD"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC USERNAME:APPLICATION_PASSWORD"</span>
   <span class="nt">-H</span> <span class="s2">"Request type: POST"</span>
 </code></pre></div>
 <blockquote>
@@ -1794,7 +1794,7 @@ You must replace <code>yourdomain.com</code> with your domain name.
 <h2 id='get-stripe-settings'>Get stripe settings</h2><div class="highlight"><pre class="highlight php tab-php"><code>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://yourdomain.com/wp-json/wppayform/v2/forms/settings/stripe"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC API_USERNAME:API_PASSWORD"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC USERNAME:APPLICATION_PASSWORD"</span>
   <span class="nt">-H</span> <span class="s2">"Request type: GET"</span>
 </code></pre></div>
 <blockquote>
@@ -1839,7 +1839,7 @@ You must replace <code>yourdomain.com</code> with your domain name.
 <h2 id='get-integrations'>Get integrations</h2><div class="highlight"><pre class="highlight php tab-php"><code>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://yourdomain.com/wp-json/wppayform/v2/forms/settings/integrations"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC API_USERNAME:API_PASSWORD"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC USERNAME:APPLICATION_PASSWORD"</span>
   <span class="nt">-H</span> <span class="s2">"Request type: GET"</span>
 </code></pre></div>
 <blockquote>
@@ -1860,7 +1860,7 @@ You must replace <code>yourdomain.com</code> with your domain name.
 <h1 id='license'>License</h1><h2 id='license-settings'>license settings</h2><div class="highlight"><pre class="highlight php tab-php"><code>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://yourdomain.com/wp-json/wppayform/v2/license"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC API_USERNAME:API_PASSWORD"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC USERNAME:APPLICATION_PASSWORD"</span>
   <span class="nt">-H</span> <span class="s2">"Request type: GET"</span>
 </code></pre></div>
 <blockquote>
@@ -1879,7 +1879,7 @@ You must replace <code>yourdomain.com</code> with your domain name.
 <h2 id='save-update-license'>Save/Update license</h2><div class="highlight"><pre class="highlight php tab-php"><code>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://yourdomain.com/wp-json/wppayform/v2/license"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC API_USERNAME:API_PASSWORD"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC USERNAME:APPLICATION_PASSWORD"</span>
   <span class="nt">-H</span> <span class="s2">"Request type: POST"</span>
 </code></pre></div>
 <blockquote>
@@ -1911,7 +1911,7 @@ You must replace <code>yourdomain.com</code> with your domain name.
 <h2 id='deactivate-license'>Deactivate license</h2><div class="highlight"><pre class="highlight php tab-php"><code>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://yourdomain.com/wp-json/wppayform/v2/license"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC API_USERNAME:API_PASSWORD"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC USERNAME:APPLICATION_PASSWORD"</span>
   <span class="nt">-H</span> <span class="s2">"Request type: DELETE"</span>
 </code></pre></div>
 <blockquote>
@@ -1927,7 +1927,7 @@ You must replace <code>yourdomain.com</code> with your domain name.
 <h1 id='entries'>Entries</h1><h2 id='get-entries'>Get entries</h2><div class="highlight"><pre class="highlight php tab-php"><code>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://yourdomain.com/wp-json/wppayform/v2/form/{id}/entries"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC API_USERNAME:API_PASSWORD"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC USERNAME:APPLICATION_PASSWORD"</span>
   <span class="nt">-H</span> <span class="s2">"Request type: GET"</span>
 </code></pre></div>
 <blockquote>
@@ -2111,7 +2111,7 @@ You must replace <code>yourdomain.com</code> with your domain name.
 <h2 id='get-a-form-reports'>Get a form reports</h2><div class="highlight"><pre class="highlight php tab-php"><code>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://yourdomain.com/wp-json/wppayform/v2/form/{id}/entries/reports"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC API_USERNAME:API_PASSWORD"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC USERNAME:APPLICATION_PASSWORD"</span>
   <span class="nt">-H</span> <span class="s2">"Request type: GET"</span>
 </code></pre></div>
 <blockquote>
@@ -2193,7 +2193,7 @@ You must replace <code>yourdomain.com</code> with your domain name.
 <h2 id='get-a-specific-entry'>Get a specific entry</h2><div class="highlight"><pre class="highlight php tab-php"><code>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://yourdomain.com/wp-json/wppayform/v2/form/{id}/entries/{entryId}"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC API_USERNAME:API_PASSWORD"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC USERNAME:APPLICATION_PASSWORD"</span>
   <span class="nt">-H</span> <span class="s2">"Request type: GET"</span>
 </code></pre></div>
 <blockquote>
@@ -2339,7 +2339,7 @@ You must replace <code>yourdomain.com</code> with your domain name.
 <h2 id='delete-note-from-entry'>Delete note from entry</h2><div class="highlight"><pre class="highlight php tab-php"><code>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://yourdomain.com/wp-json/wppayform/v2/form/{id}/entries/{entryId}/notes/{noteId}"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC API_USERNAME:API_PASSWORD"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC USERNAME:APPLICATION_PASSWORD"</span>
   <span class="nt">-H</span> <span class="s2">"Request type: DELETE"</span>
 </code></pre></div>
 <blockquote>
@@ -2384,7 +2384,7 @@ You must replace <code>yourdomain.com</code> with your domain name.
 <h2 id='change-entry-status'>Change entry status</h2><div class="highlight"><pre class="highlight php tab-php"><code>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://yourdomain.com/wp-json/wppayform/v2/form/{id}/entries/{entryId}/status"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC API_USERNAME:API_PASSWORD"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC USERNAME:APPLICATION_PASSWORD"</span>
   <span class="nt">-H</span> <span class="s2">"Request type: POST"</span>
 </code></pre></div>
 <blockquote>
@@ -2429,7 +2429,7 @@ You must replace <code>yourdomain.com</code> with your domain name.
 <h2 id='remove-entry'>Remove entry</h2><div class="highlight"><pre class="highlight php tab-php"><code>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://yourdomain.com/wp-json/wppayform/v2/forms/entries/remove"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC API_USERNAME:API_PASSWORD"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC USERNAME:APPLICATION_PASSWORD"</span>
   <span class="nt">-H</span> <span class="s2">"Request type: DELETE"</span>
 </code></pre></div>
 <blockquote>
@@ -2467,7 +2467,7 @@ You must replace <code>yourdomain.com</code> with your domain name.
 <h2 id='change-payment-status'>Change payment status</h2><div class="highlight"><pre class="highlight php tab-php"><code>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://yourdomain.com/wp-json/wppayform/v2/forms/entries/{id}/pay-status"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC API_USERNAME:API_PASSWORD"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC USERNAME:APPLICATION_PASSWORD"</span>
   <span class="nt">-H</span> <span class="s2">"Request type: PUT"</span>
 </code></pre></div>
 <blockquote>
@@ -2512,7 +2512,7 @@ You must replace <code>yourdomain.com</code> with your domain name.
 <h1 id='integrations'>Integrations</h1><h2 id='get-form-integrations'>Get form integrations</h2><div class="highlight"><pre class="highlight php tab-php"><code>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://yourdomain.com/wp-json/wppayform/v2/form/{id}/integration"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC API_USERNAME:API_PASSWORD"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC USERNAME:APPLICATION_PASSWORD"</span>
   <span class="nt">-H</span> <span class="s2">"Request type: GET"</span>
 </code></pre></div>
 <blockquote>
@@ -2583,7 +2583,7 @@ You must replace <code>yourdomain.com</code> with your domain name.
 <h2 id='get-integration-settings-of-a-form'>Get integration settings of a form</h2><div class="highlight"><pre class="highlight php tab-php"><code>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://yourdomain.com/wp-json/wppayform/v2/form/{id}/integration"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC API_USERNAME:API_PASSWORD"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC USERNAME:APPLICATION_PASSWORD"</span>
   <span class="nt">-H</span> <span class="s2">"Request type: GET"</span>
 </code></pre></div>
 <blockquote>
@@ -2715,7 +2715,7 @@ You must replace <code>yourdomain.com</code> with your domain name.
 <h2 id='delete-an-integration-of-a-form'>Delete an Integration of a form</h2><div class="highlight"><pre class="highlight php tab-php"><code>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://yourdomain.com/wp-json/wppayform/v2/form/{id}/integration/settings"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC API_USERNAME:API_PASSWORD"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC USERNAME:APPLICATION_PASSWORD"</span>
   <span class="nt">-H</span> <span class="s2">"Request type: DELETE"</span>
 </code></pre></div>
 <blockquote>
@@ -2754,7 +2754,7 @@ You must replace <code>yourdomain.com</code> with your domain name.
 <h2 id='get-slack-integration-settings-of-a-form'>Get slack integration settings of a form</h2><div class="highlight"><pre class="highlight php tab-php"><code>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://yourdomain.com/wp-json/wppayform/v2/form/{id}/integration/slack"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC API_USERNAME:API_PASSWORD"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC USERNAME:APPLICATION_PASSWORD"</span>
   <span class="nt">-H</span> <span class="s2">"Request type: GET"</span>
 </code></pre></div>
 <blockquote>
@@ -2787,7 +2787,7 @@ You must replace <code>yourdomain.com</code> with your domain name.
 <h2 id='get-webhooks'>Get webhooks</h2><div class="highlight"><pre class="highlight php tab-php"><code>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://yourdomain.com/wp-json/wppayform/v2/form/{id}/integration/slack"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC API_USERNAME:API_PASSWORD"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC USERNAME:APPLICATION_PASSWORD"</span>
   <span class="nt">-H</span> <span class="s2">"Request type: POST"</span>
 </code></pre></div>
 <blockquote>
@@ -3015,7 +3015,7 @@ You must replace <code>yourdomain.com</code> with your domain name.
 <h2 id='delete-webhook'>Delete webhook</h2><div class="highlight"><pre class="highlight php tab-php"><code>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://yourdomain.com/wp-json/wppayform/v2/form/{id}/integrations/webhook"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC API_USERNAME:API_PASSWORD"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC USERNAME:APPLICATION_PASSWORD"</span>
   <span class="nt">-H</span> <span class="s2">"Request type: DELETE"</span>
 </code></pre></div>
 <blockquote>
@@ -3056,7 +3056,7 @@ You must replace <code>yourdomain.com</code> with your domain name.
 ```python
 
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://yourdomain.com/wp-json/wppayform/v2/form/{id}/integrations/zapier"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC API_USERNAME:API_PASSWORD"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC USERNAME:APPLICATION_PASSWORD"</span>
   <span class="nt">-H</span> <span class="s2">"Request type: GET"</span>
 </code></pre></div>
 <blockquote>
@@ -3116,7 +3116,7 @@ You must replace <code>yourdomain.com</code> with your domain name.
 <h2 id='delete-zapier-notification-settin'>Delete zapier notification settin</h2><div class="highlight"><pre class="highlight php tab-php"><code>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://yourdomain.com/wp-json/wppayform/v2/form/{id}/integrations/webhook"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC API_USERNAME:API_PASSWORD"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC USERNAME:APPLICATION_PASSWORD"</span>
   <span class="nt">-H</span> <span class="s2">"Request type: DELETE"</span>
 </code></pre></div>
 <blockquote>
@@ -3154,7 +3154,7 @@ You must replace <code>yourdomain.com</code> with your domain name.
 <h1 id='payments'>Payments</h1><h2 id='get-payment-method-settings'>Get payment method settings</h2><div class="highlight"><pre class="highlight php tab-php"><code>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://yourdomain.com/wp-json/wppayform/v2/settings/payments/{payMethod}"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC API_USERNAME:API_PASSWORD"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC USERNAME:APPLICATION_PASSWORD"</span>
   <span class="nt">-H</span> <span class="s2">"Request type: GET"</span>
 </code></pre></div>
 <blockquote>
@@ -3188,7 +3188,7 @@ You must replace <code>yourdomain.com</code> with your domain name.
 <h2 id='global-stripe-settings'>Global stripe settings</h2><div class="highlight"><pre class="highlight php tab-php"><code>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://yourdomain.com/wp-json/wppayform/v2/forms/settings/stripe"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC API_USERNAME:API_PASSWORD"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC USERNAME:APPLICATION_PASSWORD"</span>
   <span class="nt">-H</span> <span class="s2">"Request type: GET"</span>
 </code></pre></div>
 <blockquote>
@@ -3215,7 +3215,7 @@ You must replace <code>yourdomain.com</code> with your domain name.
 <h2 id='get-paypal-settings'>Get paypal settings</h2><div class="highlight"><pre class="highlight php tab-php"><code>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://yourdomain.com/wp-json/wppayform/v2/settings/payments/{payMethod}"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC API_USERNAME:API_PASSWORD"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC USERNAME:APPLICATION_PASSWORD"</span>
   <span class="nt">-H</span> <span class="s2">"Request type: GET"</span>
 </code></pre></div>
 <blockquote>
@@ -3282,7 +3282,7 @@ You must replace <code>yourdomain.com</code> with your domain name.
 <h2 id='save-update-a-payment-method-settings'>Save/Update a payment method settings</h2><div class="highlight"><pre class="highlight php tab-php"><code>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://yourdomain.com/wp-json/wppayform/v2/settings/payments/{payMethod}"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC API_USERNAME:API_PASSWORD"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC USERNAME:APPLICATION_PASSWORD"</span>
   <span class="nt">-H</span> <span class="s2">"Request type: POST"</span>
 </code></pre></div>
 <blockquote>
@@ -3338,7 +3338,7 @@ You must replace <code>yourdomain.com</code> with your domain name.
 <h1 id='reports'>Reports</h1><h2 id='get-reports'>Get reports</h2><div class="highlight"><pre class="highlight php tab-php"><code>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://yourdomain.com/wp-json/wppayform/v2/reports"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC API_USERNAME:API_PASSWORD"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC USERNAME:APPLICATION_PASSWORD"</span>
   <span class="nt">-H</span> <span class="s2">"Request type: GET"</span>
 </code></pre></div>
 <blockquote>
@@ -3536,7 +3536,7 @@ You must replace <code>yourdomain.com</code> with your domain name.
 <h2 id='get-todays-data'>Get Todays data</h2><div class="highlight"><pre class="highlight php tab-php"><code>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://yourdomain.com/wp-json/wppayform/v2/reports/todays-data"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC API_USERNAME:API_PASSWORD"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC USERNAME:APPLICATION_PASSWORD"</span>
   <span class="nt">-H</span> <span class="s2">"Request type: GET"</span>
 </code></pre></div>
 <blockquote>
@@ -3614,7 +3614,7 @@ You must replace <code>yourdomain.com</code> with your domain name.
 <h2 id='recent-revenues'>Recent revenues</h2><div class="highlight"><pre class="highlight php tab-php"><code>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://yourdomain.com/wp-json/wppayform/v2/reports/recent-revenues"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC API_USERNAME:API_PASSWORD"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC USERNAME:APPLICATION_PASSWORD"</span>
   <span class="nt">-H</span> <span class="s2">"Request type: GET"</span>
 </code></pre></div>
 <blockquote>
@@ -3656,7 +3656,7 @@ You must replace <code>yourdomain.com</code> with your domain name.
 <h2 id='get-customers'>Get customers</h2><div class="highlight"><pre class="highlight php tab-php"><code>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://yourdomain.com/wp-json/wppayform/v2/reports/customers"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC API_USERNAME:API_PASSWORD"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC USERNAME:APPLICATION_PASSWORD"</span>
   <span class="nt">-H</span> <span class="s2">"Request type: GET"</span>
 </code></pre></div>
 <blockquote>
@@ -3821,7 +3821,7 @@ You must replace <code>yourdomain.com</code> with your domain name.
 <h2 id='get-a-customer'>Get a customer</h2><div class="highlight"><pre class="highlight php tab-php"><code>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://yourdomain.com/wp-json/wppayform/v2/reports/customers/{customer_email}"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC API_USERNAME:API_PASSWORD"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC USERNAME:APPLICATION_PASSWORD"</span>
   <span class="nt">-H</span> <span class="s2">"Request type: GET"</span>
 </code></pre></div>
 <blockquote>
@@ -3955,7 +3955,7 @@ You must replace <code>yourdomain.com</code> with your domain name.
 ```python
 
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://yourdomain.com/wp-json/wppayform/v2/reports/customers/{customer_email}/profile"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC API_USERNAME:API_PASSWORD"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC USERNAME:APPLICATION_PASSWORD"</span>
   <span class="nt">-H</span> <span class="s2">"Request type: GET"</span>
 </code></pre></div>
 <blockquote>
