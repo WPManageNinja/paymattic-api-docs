@@ -12,7 +12,7 @@
 
 ```shell
 curl "https://yourdomain.com/wp-json/wppayform/v2/form/{id}/integration" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Authorization: BASIC USERNAME:APPLICATION_PASSWORD"
   -H "Request type: GET"
 ```
 
@@ -89,7 +89,7 @@ This endpoint retrieves all available integrations of a form.
 
 ```shell
 curl "https://yourdomain.com/wp-json/wppayform/v2/form/{id}/integration" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Authorization: BASIC USERNAME:APPLICATION_PASSWORD"
   -H "Request type: GET"
 ```
 
@@ -227,7 +227,7 @@ This endpoint retrieves all integration settings of a form.
 
 ```shell
 curl "https://yourdomain.com/wp-json/wppayform/v2/form/{id}/integration/settings" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Authorization: BASIC USERNAME:APPLICATION_PASSWORD"
   -H "Request type: DELETE"
 ```
 
@@ -267,7 +267,7 @@ This endpoint delete an integration feed of a form upon providing `form id` and 
 
 ```shell
 curl "https://yourdomain.com/wp-json/wppayform/v2/form/{id}/integration/slack" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Authorization: BASIC USERNAME:APPLICATION_PASSWORD"
   -H "Request type: GET"
 ```
 
@@ -306,7 +306,7 @@ This endpoint retreives slack integration settings of a form. If there is a slac
 
 ```shell
 curl "https://yourdomain.com/wp-json/wppayform/v2/form/{id}/integration/slack" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Authorization: BASIC USERNAME:APPLICATION_PASSWORD"
   -H "Request type: POST"
 ```
 
@@ -539,7 +539,7 @@ This endpoint retreives all the webhooks settings of form.
 
 ```shell
 curl "https://yourdomain.com/wp-json/wppayform/v2/form/{id}/integrations/webhook" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Authorization: BASIC USERNAME:APPLICATION_PASSWORD"
   -H "Request type: DELETE"
 ```
 
@@ -578,7 +578,7 @@ This endpoint delete a webhook feed from a form.
 
 ```shell
 curl "https://yourdomain.com/wp-json/wppayform/v2/form/{id}/integrations/zapier" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Authorization: BASIC USERNAME:APPLICATION_PASSWORD"
   -H "Request type: GET"
 ```
 
@@ -642,7 +642,7 @@ This endpoint retreives all zapier settings.
 
 ```shell
 curl "https://yourdomain.com/wp-json/wppayform/v2/form/{id}/integrations/webhook" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Authorization: BASIC USERNAME:APPLICATION_PASSWORD"
   -H "Request type: DELETE"
 ```
 

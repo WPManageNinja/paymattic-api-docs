@@ -12,7 +12,7 @@
 
 ```shell
 curl "https://yourdomain.com/wp-json/wppayform/v2/forms" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Authorization: BASIC USERNAME:APPLICATION_PASSWORD"
 ```
 
 ```javascript
@@ -110,7 +110,7 @@ This endpoint retrieves all forms.
 
 ```shell
 curl "https://yourdomain.com/wp-json/wppayform/v2/forms" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Authorization: BASIC USERNAME:APPLICATION_PASSWORD"
   -H "Request type: POST"
 ```
 
@@ -171,7 +171,7 @@ This first endpoint creates a new blank form. Using this endpoint you will be ab
 
 ```shell
 curl "https://yourdomain.com/wp-json/wppayform/v2/form/{id}" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Authorization: BASIC USERNAME:APPLICATION_PASSWORD"
   -H "Request type: GET"
 ```
 
@@ -233,7 +233,7 @@ The endpoint return a specific form in a json format. Using this endpoint you wi
 
 ```shell
 curl "https://yourdomain.com/wp-json/wppayform/v2/form/{id}" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Authorization: BASIC USERNAME:APPLICATION_PASSWORD"
   -H "Request type: POST"
 ```
 
@@ -273,7 +273,7 @@ The endpoint update a specific form. Using this endpoint you will get to update 
 
 ```shell
 curl "https://yourdomain.com/wp-json/wppayform/v2/form/{id}" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Authorization: BASIC USERNAME:APPLICATION_PASSWORD"
   -H "Request type: DELETE"
 ```
 
@@ -311,7 +311,7 @@ The endpoint delete a specific form.
 
 ```shell
 curl "https://yourdomain.com/wp-json/wppayform/v2/forms/demo" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Authorization: BASIC USERNAME:APPLICATION_PASSWORD"
   -H "Request type: GET"
 ```
 
@@ -367,7 +367,7 @@ This endpoint return demo froms. Using this endpoint you will be able to get dif
 
 ```shell
 curl "https://yourdomain.com/wp-json/wppayform/v2/forms/formatted" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Authorization: BASIC USERNAME:APPLICATION_PASSWORD"
   -H "Request type: GET"
 ```
 
@@ -412,7 +412,7 @@ This endpoint return list of available forms. No url paramaters required.
 
 ```shell
 curl "https://yourdomain.com/wp-json/wppayform/v2/tools/form/{id}/export/" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Authorization: BASIC USERNAME:APPLICATION_PASSWORD"
   -H "Request type: GET"
 ```
 
@@ -449,7 +449,7 @@ This endpoint make a form get downloaded as a json file.
 
 ```shell
 curl "https://yourdomain.com/wp-json/wppayform/v2/settings/coupon" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Authorization: BASIC USERNAME:APPLICATION_PASSWORD"
   -H "Request type: GET"
 ```
 
@@ -525,7 +525,7 @@ This endpoint retrieves all available coupons.
 
 ```shell
 curl "https://yourdomain.com/wp-json/wppayform/v2/settings/coupon" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Authorization: BASIC USERNAME:APPLICATION_PASSWORD"
   -H "Request type: POST"
 ```
 
@@ -571,7 +571,7 @@ This endpoint will create a coupon upon providing the required values.
 
 ```shell
 curl "https://yourdomain.com/wp-json/wppayform/v2/settings/coupon" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Authorization: BASIC USERNAME:APPLICATION_PASSWORD"
   -H "Request type: DELETE"
 ```
 

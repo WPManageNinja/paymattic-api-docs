@@ -12,7 +12,7 @@
 
 ```shell
 curl "https://yourdomain.com/wp-json/wppayform/v2/settings/payments/{payMethod}" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Authorization: BASIC USERNAME:APPLICATION_PASSWORD"
   -H "Request type: GET"
 ```
 
@@ -51,7 +51,7 @@ This endpoint retrieves specific paymeny method settings.
 
 ```shell
 curl "https://yourdomain.com/wp-json/wppayform/v2/forms/settings/stripe" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Authorization: BASIC USERNAME:APPLICATION_PASSWORD"
   -H "Request type: GET"
 ```
 
@@ -94,7 +94,7 @@ This endpoint retrieves specific paymeny method settings.
 
 ```shell
 curl "https://yourdomain.com/wp-json/wppayform/v2/settings/payments/{payMethod}" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Authorization: BASIC USERNAME:APPLICATION_PASSWORD"
   -H "Request type: GET"
 ```
 
@@ -175,7 +175,7 @@ This endpoint retrieves paypal settings.
 
 ```shell
 curl "https://yourdomain.com/wp-json/wppayform/v2/settings/payments/{payMethod}" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Authorization: BASIC USERNAME:APPLICATION_PASSWORD"
   -H "Request type: POST"
 ```
 

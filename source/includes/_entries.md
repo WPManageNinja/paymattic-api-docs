@@ -12,7 +12,7 @@
 
 ```shell
 curl "https://yourdomain.com/wp-json/wppayform/v2/form/{id}/entries" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Authorization: BASIC USERNAME:APPLICATION_PASSWORD"
   -H "Request type: GET"
 ```
 
@@ -177,7 +177,7 @@ This endpoint return all the entries/submissions for the given form id.
 
 ```shell
 curl "https://yourdomain.com/wp-json/wppayform/v2/form/{id}/entries/reports" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Authorization: BASIC USERNAME:APPLICATION_PASSWORD"
   -H "Request type: GET"
 ```
 
@@ -264,7 +264,7 @@ This endpoint generates reports for a specific form.
 
 ```shell
 curl "https://yourdomain.com/wp-json/wppayform/v2/form/{id}/entries/{entryId}" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Authorization: BASIC USERNAME:APPLICATION_PASSWORD"
   -H "Request type: GET"
 ```
 
@@ -411,7 +411,7 @@ This endpoint will return a specific entry for the given form id and entryID.
 
 ```shell
 curl "https://yourdomain.com/wp-json/wppayform/v2/form/{id}/entries/{entryId}/notes/{noteId}" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Authorization: BASIC USERNAME:APPLICATION_PASSWORD"
   -H "Request type: DELETE"
 ```
 
@@ -450,7 +450,7 @@ This endpoint delete a note from a specific entry. With given entry id and note 
 
 ```shell
 curl "https://yourdomain.com/wp-json/wppayform/v2/form/{id}/entries/{entryId}/status" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Authorization: BASIC USERNAME:APPLICATION_PASSWORD"
   -H "Request type: POST"
 ```
 
@@ -491,7 +491,7 @@ This endpoint delete a note from a specific entry. With given entry id and note 
 
 ```shell
 curl "https://yourdomain.com/wp-json/wppayform/v2/forms/entries/remove" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Authorization: BASIC USERNAME:APPLICATION_PASSWORD"
   -H "Request type: DELETE"
 ```
 
@@ -528,7 +528,7 @@ This end point removes/deletes an entry/submission for the given form id. You al
 
 ```shell
 curl "https://yourdomain.com/wp-json/wppayform/v2/forms/entries/{id}/pay-status" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Authorization: BASIC USERNAME:APPLICATION_PASSWORD"
   -H "Request type: PUT"
 ```
 

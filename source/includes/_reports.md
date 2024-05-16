@@ -12,7 +12,7 @@
 
 ```shell
 curl "https://yourdomain.com/wp-json/wppayform/v2/reports" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Authorization: BASIC USERNAME:APPLICATION_PASSWORD"
   -H "Request type: GET"
 ```
 
@@ -224,7 +224,7 @@ This endpoint retreives whole reports in a json format.
 
 ```shell
 curl "https://yourdomain.com/wp-json/wppayform/v2/reports/todays-data" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Authorization: BASIC USERNAME:APPLICATION_PASSWORD"
   -H "Request type: GET"
 ```
 
@@ -316,7 +316,7 @@ This endpoint retrieves Todays reports with customer stats.
 
 ```shell
 curl "https://yourdomain.com/wp-json/wppayform/v2/reports/recent-revenues" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Authorization: BASIC USERNAME:APPLICATION_PASSWORD"
   -H "Request type: GET"
 ```
 
@@ -373,7 +373,7 @@ This endpoint retieves recent revenues reports in a json format.
 
 ```shell
 curl "https://yourdomain.com/wp-json/wppayform/v2/reports/customers" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Authorization: BASIC USERNAME:APPLICATION_PASSWORD"
   -H "Request type: GET"
 ```
 
@@ -552,7 +552,7 @@ This endpoint retieves all the customers and their data in a json format.
 
 ```shell
 curl "https://yourdomain.com/wp-json/wppayform/v2/reports/customers/{customer_email}" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Authorization: BASIC USERNAME:APPLICATION_PASSWORD"
   -H "Request type: GET"
 ```
 
@@ -687,7 +687,7 @@ customer_email | string/email | true | The email of the customer.
 
 ```shell
 curl "https://yourdomain.com/wp-json/wppayform/v2/reports/customers/{customer_email}/profile" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Authorization: BASIC USERNAME:APPLICATION_PASSWORD"
   -H "Request type: GET"
 ```
 

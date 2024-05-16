@@ -12,7 +12,7 @@
 
 ```shell
 curl "https://yourdomain.com/wp-json/wppayform/v2/form/{id}/settings" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Authorization: BASIC USERNAME:APPLICATION_PASSWORD"
   -H "Request type: GET"
 ```
 > The first command returns JSON structured like this:
@@ -310,7 +310,7 @@ This endpoint retrieves all the related settings of a form.
 
 ```shell
 curl "https://yourdomain.com/wp-json/wppayform/v2/form/{id}/settings/design" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Authorization: BASIC USERNAME:APPLICATION_PASSWORD"
   -H "Request type: GET"
 ```
 > The first command returns JSON structured like this:
@@ -354,7 +354,7 @@ This endpoint retreives all the design settings of a form.
 
 ```shell
 curl "https://yourdomain.com/wp-json/wppayform/v2/form/{id}/settings/design" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Authorization: BASIC USERNAME:APPLICATION_PASSWORD"
   -H "Request type: POST"
 ```
 > The first command returns JSON structured like this:
@@ -392,7 +392,7 @@ This endpoitn save the design settings of a form.
 
 ```shell
 curl "https://yourdomain.com/wp-json/wppayform/v2/forms/settings/currencies" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Authorization: BASIC USERNAME:APPLICATION_PASSWORD"
   -H "Request type: GET"
 ```
 
@@ -586,7 +586,7 @@ This endpoint return global currecny settings.
 
 ```shell
 curl "https://yourdomain.com/wp-json/wppayform/v2/forms/settings/currencies" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Authorization: BASIC USERNAME:APPLICATION_PASSWORD"
   -H "Request type: POST"
 ```
 
@@ -623,7 +623,7 @@ This endpoint saves global currency settings.
 
 ```shell
 curl "https://yourdomain.com/wp-json/wppayform/v2/forms/settings/currencies" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Authorization: BASIC USERNAME:APPLICATION_PASSWORD"
   -H "Request type: GET"
 ```
 
@@ -656,7 +656,7 @@ This endpoint gets access roles.
 
 ```shell
 curl "https://yourdomain.com/wp-json/wppayform/v2/forms/settings/currencies" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Authorization: BASIC USERNAME:APPLICATION_PASSWORD"
   -H "Request type: POST"
 ```
 
@@ -693,7 +693,7 @@ This endpoint set global roles.
 
 ```shell
 curl "https://yourdomain.com/wp-json/wppayform/v2/forms/settings/stripe" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Authorization: BASIC USERNAME:APPLICATION_PASSWORD"
   -H "Request type: GET"
 ```
 
@@ -744,7 +744,7 @@ This endpoint return stripe settings.
 
 ```shell
 curl "https://yourdomain.com/wp-json/wppayform/v2/forms/settings/integrations" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Authorization: BASIC USERNAME:APPLICATION_PASSWORD"
   -H "Request type: GET"
 ```
 
@@ -783,7 +783,7 @@ This endpoint return all global integration addons.
 
 ```shell
 curl "https://yourdomain.com/wp-json/wppayform/v2/license" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Authorization: BASIC USERNAME:APPLICATION_PASSWORD"
   -H "Request type: GET"
 ```
 
@@ -816,7 +816,7 @@ This endpoint returns the License settings.
 
 ```shell
 curl "https://yourdomain.com/wp-json/wppayform/v2/license" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Authorization: BASIC USERNAME:APPLICATION_PASSWORD"
   -H "Request type: POST"
 ```
 
@@ -853,7 +853,7 @@ This endpoint saves/updates license.
 
 ```shell
 curl "https://yourdomain.com/wp-json/wppayform/v2/license" \
-  -H "Authorization: BASIC API_USERNAME:API_PASSWORD"
+  -H "Authorization: BASIC USERNAME:APPLICATION_PASSWORD"
   -H "Request type: DELETE"
 ```
 
