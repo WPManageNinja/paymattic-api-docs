@@ -435,9 +435,6 @@
                   <li>
                     <a href="#remove-entry" class="toc-h2 toc-link" data-title="Remove entry">Remove entry</a>
                   </li>
-                  <li>
-                    <a href="#change-payment-status" class="toc-h2 toc-link" data-title="Change payment status">Change payment status</a>
-                  </li>
               </ul>
           </li>
           <li>
@@ -2462,51 +2459,6 @@ You must replace <code>yourdomain.com</code> with your domain name.
 <td>int</td>
 <td>true</td>
 <td>The <code>form ID</code> of the entry</td>
-</tr>
-</tbody></table>
-<h2 id='change-payment-status'>Change payment status</h2><div class="highlight"><pre class="highlight php tab-php"><code>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://yourdomain.com/wp-json/wppayform/v2/forms/entries/{id}/pay-status"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: BASIC USERNAME:APPLICATION_PASSWORD"</span>
-  <span class="nt">-H</span> <span class="s2">"Request type: PUT"</span>
-</code></pre></div>
-<blockquote>
-<p>The above command returns  json structured like this:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Payment status successfully changed"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div>
-<blockquote>
-<p>On given existing payment status, the endpoint return json structured like this:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The submission have the same status"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div>
-<p>This end point change payment status of an specific entry. Given the entry/submission id.</p>
-<h3 id='http-request-6'>Http request</h3>
-<p><code>PUT https://yourdomain.com/wp-json/wppayform/v2/forms/entries/{id}/pay-status</code></p>
-<h3 id='url-parameters-6'>URL parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>type</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>submission_id</td>
-<td>int</td>
-<td>true</td>
-<td>The specific <code>entry id</code></td>
-</tr>
-<tr>
-<td>new_payment_status</td>
-<td>string</td>
-<td>true</td>
-<td>The new payment status values are: <code>paid, pending, failed, refunded</code>.</td>
 </tr>
 </tbody></table>
 <h1 id='integrations'>Integrations</h1><h2 id='get-form-integrations'>Get form integrations</h2><div class="highlight"><pre class="highlight php tab-php"><code>
